@@ -1,0 +1,15 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="error401.aspx.cs" Inherits="Admin_1.admin.authetication.error401" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+    </form>
+</body>
+</html>
