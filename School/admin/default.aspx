@@ -49,7 +49,7 @@
                             <div class="card-top">
                                 <i class="fas fa-sack-dollar fa-3x "style="color:#f59f00;"></i>
                                 <br />
-                                <span class="card-title" style="color: #cc6013; align-items: center; font-size: 20px">Fees Collected</span>
+                                <span class="card-title" style="color: #cc6013; align-items: center; font-size: 20px">Fees</span>
                             </div>
 
                             <div class="card-value text-green">
