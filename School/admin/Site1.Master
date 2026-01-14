@@ -41,11 +41,10 @@
             <!--**********************************
         Nav header start
     ***********************************-->
-            <div class="nav-header">
+            <div class="nav-header" >
                 <a href="index.html" class="brand-logo">
-                    <img class="logo-abbr" src="./images/logo.png" alt="">
-                    <img class="logo-compact" src="./images/logo-text.png" alt="">
-                    <img class="brand-title" src="./images/logo-text.png" alt="">
+                     <img src="../SchoolWebsite/image/logo.jpg" class="img-fluid" style="height: 5rem; width: 5rem;" alt="">
+                      <h2 style="padding-left:1rem; padding-right:5rem; font-family:'Playfair Display', serif; color:#fff; font-weight:700;">SGIS</h2>
                 </a>
 
                 <div class="nav-control">
@@ -76,15 +75,17 @@
                                         </form>
                                     </div>
                                 </div>
+                
                             </div>
 
                             <ul class="navbar-nav header-right">
                                 <li class="nav-item dropdown notification_dropdown">
                                     <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                                         <i class="mdi mdi-bell"></i>
-                                        <div class="pulse-css"></div>
+                                     <%--   <div class="pulse-css"></div>--%>
+                                    
                                     </a>
-                                    <div class="dropdown-menu dropdown-menu-right">
+                                   <%-- <div class="dropdown-menu dropdown-menu-right">
                                         <ul class="list-unstyled">
                                             <li class="media dropdown-item">
                                                 <span class="success"><i class="ti-user"></i></span>
@@ -140,24 +141,28 @@
                                         </ul>
                                         <a class="all-notification" href="#">See all notifications <i
                                             class="ti-arrow-right"></i></a>
-                                    </div>
+                                    </div>--%>
                                 </li>
                                 <li class="nav-item dropdown header-profile">
                                     <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                                         <i class="mdi mdi-account"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right">
-                                        <a href="./app-profile.html" class="dropdown-item">
+                                        <a href="#" class="dropdown-item">
                                             <i class="icon-user"></i>
-                                            <span class="ml-2">Profile </span>
+                                            <span class="ml-2">Madhura</span>
                                         </a>
                                         <a href="./email-inbox.html" class="dropdown-item">
                                             <i class="icon-envelope-open"></i>
-                                            <span class="ml-2">Inbox </span>
+                                            <span class="ml-2">mdhura@gmail.com</span>
                                         </a>
-                                        <a href="./page-login.html" class="dropdown-item">
+                                        <a href="authetication/Login.aspx" class="dropdown-item">
                                             <i class="icon-key"></i>
                                             <span class="ml-2">Logout </span>
+                                        </a>
+                                     <a href="../SchoolWebsite/home.aspx" class="dropdown-item">
+                                           <i class="fas fa-home me-1 icon-home"></i>
+                                            <span class="ml-2">Go to home page</span>
                                         </a>
                                     </div>
                                 </li>
@@ -173,7 +178,7 @@
             <!--**********************************
         Sidebar start
     ***********************************-->
-            <div class="quixnav">
+            <div class="quixnav" >
                 <div class="quixnav-scroll">
                     <ul class="metismenu" id="menu">
 

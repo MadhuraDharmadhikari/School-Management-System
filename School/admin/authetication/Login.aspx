@@ -11,7 +11,7 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png" />
     <link href="../css/style.css" rel="stylesheet" />
-    
+
 </head>
 
 <body class="h-100">
@@ -23,18 +23,13 @@
                         <div class="row no-gutters">
                             <div class="col-xl-12">
                                 <div class="auth-form">
-                                    <h4 class="text-center mb-4">Sign in your account</h4>
+                                    <h4 class="text-center mb-4" >Login your account</h4>
                                     <form runat="server">
                                         <div class="form-group">
                                             <asp:Label ID="lblEmail" runat="server" Text="Email" AssociatedControlID="txtEmail" Font-Bold="True"></asp:Label>
                                             <asp:TextBox ID="txtEmail" runat="server" placeholder="hello@examplegmail.com" CssClass="form-control" TextMode="Email"></asp:TextBox>
-
-                                            <%--           <label><strong>Email</strong></label>
-                                            <input type="email" class="form-control" value="hello@example.com"/>--%>
                                         </div>
                                         <div class="form-group">
-                                            <%--       <label><strong>Password</strong></label>
-                                            <input type="password" class="form-control" value="Password" />--%>
                                             <asp:Label ID="lblPassword" runat="server" Text="Password" AssociatedControlID="txtPassword" Font-Bold="True"></asp:Label>
                                             <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" CssClass="form-control" TextMode="Password"></asp:TextBox>
 

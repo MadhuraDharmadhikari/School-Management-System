@@ -3586,6 +3586,18 @@
     <Content Include="admin\vendor\x-editable\dist\bootstrap3-editable\img\clear.png" />
     <Content Include="admin\vendor\x-editable\dist\bootstrap3-editable\img\loading.gif" />
     <Content Include="admin\vendor\x-editable\dist\bootstrap3-editable\js\bootstrap-editable.min.js" />
+    <Content Include="SchoolWebsite\about_us.aspx" />
+    <Content Include="SchoolWebsite\admission_enqure.aspx" />
+    <Content Include="SchoolWebsite\admission_info.aspx" />
+    <Content Include="SchoolWebsite\classroom.aspx" />
+    <Content Include="SchoolWebsite\contact.aspx" />
+    <Content Include="SchoolWebsite\enqure.aspx" />
+    <Content Include="SchoolWebsite\facility.aspx" />
+    <Content Include="SchoolWebsite\feedback.aspx" />
+    <Content Include="SchoolWebsite\home.aspx" />
+    <Content Include="SchoolWebsite\laboratories.aspx" />
+    <Content Include="SchoolWebsite\library.aspx" />
+    <Content Include="SchoolWebsite\playground.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -3646,6 +3658,97 @@
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolWebsite\about_us.aspx.cs">
+      <DependentUpon>about_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\about_us.aspx.designer.cs">
+      <DependentUpon>about_us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\admission_enqure.aspx.cs">
+      <DependentUpon>admission_enqure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\admission_enqure.aspx.designer.cs">
+      <DependentUpon>admission_enqure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\admission_info.aspx.cs">
+      <DependentUpon>admission_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\admission_info.aspx.designer.cs">
+      <DependentUpon>admission_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\classroom.aspx.cs">
+      <DependentUpon>classroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\classroom.aspx.designer.cs">
+      <DependentUpon>classroom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\enqure.aspx.cs">
+      <DependentUpon>enqure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\enqure.aspx.designer.cs">
+      <DependentUpon>enqure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\facility.aspx.cs">
+      <DependentUpon>facility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\facility.aspx.designer.cs">
+      <DependentUpon>facility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\laboratories.aspx.cs">
+      <DependentUpon>laboratories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\laboratories.aspx.designer.cs">
+      <DependentUpon>laboratories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\library.aspx.cs">
+      <DependentUpon>library.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\library.aspx.designer.cs">
+      <DependentUpon>library.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\playground.aspx.cs">
+      <DependentUpon>playground.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\playground.aspx.designer.cs">
+      <DependentUpon>playground.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\School.Master.cs">
+      <DependentUpon>School.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\School.Master.designer.cs">
+      <DependentUpon>School.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\Site1.Master" />
@@ -4085,6 +4188,7 @@
     <Content Include="admin\vendor\tinymce\skins\lightgray\fonts\tinymce.ttf" />
     <Content Include="admin\vendor\tinymce\skins\lightgray\fonts\tinymce.woff" />
     <None Include="packages.config" />
+    <Content Include="SchoolWebsite\School.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

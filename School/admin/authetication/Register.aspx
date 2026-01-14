@@ -5,13 +5,13 @@
 <html lang="en" class="h-100">
 
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Focus - Bootstrap Admin Dashboard </title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png"/>
-    <link href="../css/style.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png" />
+    <link href="../css/style.css" rel="stylesheet" />
 
 </head>
 
@@ -25,18 +25,19 @@
                             <div class="col-xl-12">
                                 <div class="auth-form">
                                     <h4 class="text-center mb-4">Sign up your account</h4>
-                                    <form action="index.html">
+                                    <form runat="server">
                                         <div class="form-group">
-                                            <label><strong>Username</strong></label>
-                                            <input type="text" class="form-control" placeholder="username"/>
+                                            <asp:Label ID="Label1" runat="server" Text="Username" AssociatedControlID="txtEmail" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtuser" runat="server" placeholder="Username" CssClass="form-control" ></asp:TextBox>
                                         </div>
                                         <div class="form-group">
-                                            <label><strong>Email</strong></label>
-                                            <input type="email" class="form-control" placeholder="hello@example.com"/>
+                                            <asp:Label ID="lblEmail" runat="server" Text="Email" AssociatedControlID="txtEmail" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtEmail" runat="server" placeholder="hello@examplegmail.com" CssClass="form-control" TextMode="Email"></asp:TextBox>
                                         </div>
                                         <div class="form-group">
-                                            <label><strong>Password</strong></label>
-                                            <input type="password" class="form-control" value="Password"/>
+                                            <asp:Label ID="lblPassword" runat="server" Text="Password" AssociatedControlID="txtPassword" Font-Bold="True"></asp:Label>
+                                            <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" CssClass="form-control" TextMode="Password"></asp:TextBox>
+
                                         </div>
                                         <div class="text-center mt-4">
                                             <button type="submit" class="btn btn-primary btn-block">Sign me up</button>
@@ -53,7 +54,7 @@
             </div>
         </div>
     </div>
-  
+
     <!--**********************************
         Scripts
     ***********************************-->
