@@ -15,15 +15,20 @@
 </head>
 
 <body class="h-100">
+
+    <a href="~/SchoolWebsite/home.aspx" runat="server" id="admin"
+        style="position: fixed; bottom: 20px; right: 20px; background-color: #093cc7; color: Black; padding: 10px 16px; border-radius: 6px; text-decoration: none; z-index: 1000; font-weight: bold;">Go TO Home
+    </a>
+    <!-- Navbar -->
     <div class="authincation h-100">
         <div class="container-fluid h-100">
             <div class="row justify-content-center h-100 align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="authincation-content">
                         <div class="row no-gutters">
                             <div class="col-xl-12">
                                 <div class="auth-form">
-                                    <h4 class="text-center mb-4" >Login your account</h4>
+                                    <h4 class="text-center mb-4">Login your account</h4>
                                     <form runat="server">
                                         <div class="form-group">
                                             <asp:Label ID="lblEmail" runat="server" Text="Email" AssociatedControlID="txtEmail" Font-Bold="True"></asp:Label>

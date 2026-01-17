@@ -25,7 +25,7 @@ namespace School.admin
         void LoadStudentCount()
         {
             SqlConnection con = new SqlConnection(cs);
-            SqlCommand cmd = new SqlCommand("SELECT COUNT(StudentId) FROM Students", con);
+            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Add_Student", con);
 
             con.Open();
             lblStduent.Text = cmd.ExecuteScalar().ToString();
@@ -35,7 +35,7 @@ namespace School.admin
         void LoadTeacher()
         {
             SqlConnection con = new SqlConnection(cs);
-            SqlCommand cmd = new SqlCommand("Select  COUNT(TeacherId) From Teachers", con);
+            SqlCommand cmd = new SqlCommand("Select  COUNT(*) From Teachers", con);
             con.Open();
             lblTeacher.Text = cmd.ExecuteScalar().ToString();
             con.Close();

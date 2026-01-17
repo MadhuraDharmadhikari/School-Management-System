@@ -185,7 +185,7 @@
 
                         <%-- Dashboard--%>
                         <li class="nav-label first">Main Menu</li>
-                        <li><a href="javascript:void()" aria-expanded="false">
+                        <li><a href="default.aspx" aria-expanded="false">
                             <i class="icon icon-single-04"></i><span class="nav-text">Dashboard</span></a>
                         </li>
 
@@ -194,7 +194,7 @@
                             <i class="fas fa-user-graduate"></i><span class="nav-text">STUDENTS</span></a>
                             <ul aria-expanded="false">
                                 <li><a href="#"><i class="fas fa-list"></i>Student List</a></li>
-                                <li><a href="#"><i class="fas fa-user-plus"></i>Add Student</a></li>
+                                <li><a href="studentadd.aspx"><i class="fas fa-user-plus"></i>Add Student</a></li>
                             <%--    <li><a href="#"><i class="fas fa-calendar-check"></i>Attendance</a></li>--%>
                                 <li><a href="#"><i class="fas fa-chart-bar"></i>Result</a></li>
                             </ul>
@@ -205,8 +205,8 @@
                         <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                             class="icon icon-layout-25"></i><span class="nav-text">TEACHERS</span></a>
                             <ul aria-expanded="false">
-                                <li><a href="table-bootstrap-basic.html">Teacher List</a></li>
-                                <li><a href="table-bootstrap-basic.html">Add Teacher</a></li>
+                                <li><a href="#">Teacher List</a></li>
+                                <li><a href="teacheradd.aspx">Add Teacher</a></li>
                                 <li><a href="table-bootstrap-basic.html">Subjects Assigned</a></li>
                             </ul>
                         </li>
