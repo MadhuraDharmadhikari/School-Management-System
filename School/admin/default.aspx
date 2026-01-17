@@ -7,74 +7,62 @@
         <!-- row -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card">
+                <div class="col-md-3">
+                    <div class="card" style="background-color:#cd88f5">
                         <div class="stat-widget-two card-body">
                             <div class="card-top">
                                 <i class="fas fa-user-graduate fa-3x" style="color:#2f9e44;"></i>
                                 <br />
-                                <span class="card-title" style="color: #064305; align-items: center; font-size: 20px">Total Students</span>
+                                <span class="card-title" style="color: #064305; align-items: center; font-size: 28px">Total Students</span>
                             </div>
 
                             <div class="card-value text-green">
-                                <asp:Label ID="lblStduent" runat="server" Text="850"></asp:Label>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-success w-10" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                <asp:Label ID="txtstudent" runat="server" Text="850" style=" align-items: center; font-size: 25px;"></asp:Label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card">
-                        <div class="stat-widget-two card-body">
-                            <div class="card-top">
-                                <i class="fas fa-chalkboard-teacher fa-3x " style="color:#364fc7;"></i>
-                                <br />
-                                <span class="card-title" style="color: #0d09b3; align-items: center; font-size: 20px">Total Teachers</span>
-                            </div>
-
-                            <div class="card-value text-green">
-                                <asp:Label ID="lblTeacher" runat="server" Text="850"></asp:Label>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar w-10"   style="background-color:#0d09b3;" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card">
+                  <div class="col-md-3">
+                    <div class="card" style="background-color:#a6ee80">
                         <div class="stat-widget-two card-body">
                             <div class="card-top">
                                 <i class="fas fa-sack-dollar fa-3x "style="color:#f59f00;"></i>
                                 <br />
-                                <span class="card-title" style="color: #cc6013; align-items: center; font-size: 20px">Fees</span>
+                                <span class="card-title" style="color: #cc6013; align-items: center; font-size: 28px">Fees</span>
                             </div>
 
                             <div class="card-value text-green">
-                                <asp:Label ID="txt" runat="server" Text="850"></asp:Label>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar w-10"  style="background-color:#cc6013;" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                <asp:Label ID="txttotalfees" runat="server" Text="850" style=" align-items: center; font-size: 25px"></asp:Label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card">
+                <div class="col-md-3">
+                    <div class="card" style="background-color:#d7bdbd">
+                        <div class="stat-widget-two card-body">
+                            <div class="card-top">
+                               <i class="fas fa-circle-check fa-3x" style="color:#28a745;"></i>
+                                <br />
+                                <span class="card-title" style="color: #0d09b3; align-items: center; font-size: 28px">Paid Fees</span>
+                            </div>
+
+                            <div class="card-value text-green">
+                                <asp:Label ID="txtpaidfees" runat="server" Text="850" style="align-items: center; font-size: 25px"></asp:Label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card" style="background-color:#39b8e6">
                         <div class="stat-widget-two card-body">
                             <div class="card-top">
                                 <i class="fas fa-hourglass-half fa-3x "  style="color:#c92a2a;"></i>
                                 <br />
-                                <span class="card-title" style="color: #dd1616; align-items: center; font-size: 20px">Pending Fees</span>
+                                <span class="card-title" style="color: #dd1616; align-items: center; font-size: 28px">Pending Fees</span>
                             </div>
-
                             <div class="card-value text-green">
-                                <asp:Label ID="Label3" runat="server" Text="850"></asp:Label>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar  w-10"   style="background-color:#dd1616;" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                <asp:Label ID="txtpending" runat="server" Text="850" style="align-items: center; font-size: 30px"></asp:Label>
                             </div>
                         </div>
                     </div>

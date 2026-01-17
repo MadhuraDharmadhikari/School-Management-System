@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -28,17 +29,52 @@ namespace School.admin
             SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Add_Student", con);
 
             con.Open();
-            lblStduent.Text = cmd.ExecuteScalar().ToString();
+            txtstudent.Text = cmd.ExecuteScalar().ToString();
             con.Close();
             LoadTeacher();
         }
         void LoadTeacher()
         {
             SqlConnection con = new SqlConnection(cs);
-            SqlCommand cmd = new SqlCommand("Select  COUNT(*) From Teachers", con);
+            SqlCommand cmd = new SqlCommand("Select  SUM(PaidAmount) From Add_Student", con);
             con.Open();
-            lblTeacher.Text = cmd.ExecuteScalar().ToString();
+            txtpaidfees.Text = cmd.ExecuteScalar().ToString();
             con.Close();
+            LoadTotalFeesCollected();
         }
+
+        void LoadTotalFeesCollected()
+        {
+            SqlConnection con = new SqlConnection(cs);
+            SqlCommand cmd = new SqlCommand("Select  SUM(TotalFees) From Add_Student", con);
+            con.Open();
+            txttotalfees.Text = cmd.ExecuteScalar().ToString();
+            con.Close();
+            LoadPendingCollected();
+        }
+
+        void LoadPendingCollected()
+        {
+            SqlConnection con = new SqlConnection(cs);
+            SqlCommand cmd = new SqlCommand("Select  SUM(PendingAmount) From Add_Student", con);
+            con.Open();
+            txtpending.Text = cmd.ExecuteScalar().ToString();
+            con.Close();
+
+        }
+
+
+
+        //private void LoadTotalFeesCollected()
+        //{
+        //    SqlCommand cmd = new SqlCommand(
+        //        "SELECT ISNULL(SUM(PaidAmount),0) FROM StudentFees", con);
+
+        //    con.Open();
+        //    decimal total = Convert.ToDecimal(cmd.ExecuteScalar());
+        //    con.Close();
+
+        //    txttotalfees.Text = total.ToString("₹ 0.00");
     }
-}
+
+    }
