@@ -1,0 +1,71 @@
+﻿
+.slider-wrapper {
+    background: background: rgba(0, 0, 0, 0.35);
+    
+    padding: 60px 0;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+}
+
+.slider-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #e0211b;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.slider-track {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: max-content;
+    animation: slide 20s linear infinite; /* smooth continuous scroll */
+}
+
+    /* Duplicate slides visually for seamless scroll */
+    .slider-track::after {
+        content: '';
+        flex: 0 0 auto;
+        width: 100%; /* pseudo-element to create loop effect */
+    }
+
+    .slider-track li {
+        flex-shrink: 0;
+        width: 420px;
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+    }
+
+        .slider-track li img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .slider-track li span {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #f7c948, #c89b2c);
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+/* Smooth sliding animation */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%); /* scrolls half of track, then loops */
+    }
+}
