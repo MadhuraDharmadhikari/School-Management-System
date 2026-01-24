@@ -149,15 +149,20 @@ namespace School.admin
                 cmd.Parameters.AddWithValue("@PaymentMode", ddlPaymentMode.SelectedItem.Text.Trim());
                 con.Open();
                 cmd.ExecuteNonQuery();
-
-
-                ClientScript.RegisterStartupScript(
-    GetType(),
-    "msg",
-    "swal('Registered Successfully!','','success');",
-    true
-);
             }
+    ClearControls();
+
+    // Show SweetAlert without page reload
+    ScriptManager.RegisterStartupScript(
+        this,
+        GetType(),
+        "success",
+        "swal('Registered Successfully!', '', 'success');",
+        true
+    );
+
+            //Response.Redirect("studentadd.aspx", false);
+            //Context.ApplicationInstance.CompleteRequest();
         }
 
         private void ClearControls()
