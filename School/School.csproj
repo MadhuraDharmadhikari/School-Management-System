@@ -76,6 +76,7 @@
     <Content Include="admin\css\perfect-scrollbar.css" />
     <Content Include="admin\css\style.css" />
     <Content Include="admin\default.aspx" />
+    <Content Include="admin\Global.asax" />
     <Content Include="admin\icons\avasta\css\style.css" />
     <Content Include="admin\icons\avasta\fonts\avasta.svg" />
     <Content Include="admin\icons\font-awesome-old\css\font-awesome.min.css" />
@@ -3651,6 +3652,9 @@
     </Compile>
     <Compile Include="admin\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="admin\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
