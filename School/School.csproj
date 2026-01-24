@@ -268,6 +268,7 @@
     <Content Include="admin\js\settings.js" />
     <Content Include="admin\js\styleSwitcher.js" />
     <Content Include="admin\studentadd.aspx" />
+    <Content Include="admin\studentgrid.aspx" />
     <Content Include="admin\teacheradd.aspx" />
     <Content Include="admin\vendor\amcharts\amcharts.js" />
     <Content Include="admin\vendor\amcharts\ammap.js" />
@@ -3669,6 +3670,13 @@
     </Compile>
     <Compile Include="admin\studentadd.aspx.designer.cs">
       <DependentUpon>studentadd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\studentgrid.aspx.cs">
+      <DependentUpon>studentgrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\studentgrid.aspx.designer.cs">
+      <DependentUpon>studentgrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\teacheradd.aspx.cs">
       <DependentUpon>teacheradd.aspx</DependentUpon>

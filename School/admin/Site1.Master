@@ -198,7 +198,7 @@
                         <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="fas fa-user-graduate"></i><span class="nav-text">STUDENTS</span></a>
                             <ul aria-expanded="false">
-                                <li><a href="#"><i class="fas fa-list"></i>Student List</a></li>
+                                <li><a href="studentgrid.aspx"><i class="fas fa-list"></i>Student List</a></li>
                                 <li><a href="studentadd.aspx"><i class="fas fa-user-plus"></i>Add Student</a></li>
                             <%--    <li><a href="#"><i class="fas fa-calendar-check"></i>Attendance</a></li>--%>
                                 <li><a href="#"><i class="fas fa-chart-bar"></i>Result</a></li>
