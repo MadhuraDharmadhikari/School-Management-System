@@ -18,6 +18,8 @@ namespace School.admin
             if (!IsPostBack)
             {
                 BindGender();
+                GenerateAdmissionNo();
+                txtSalary.ReadOnly = true;
             }
         }
         private void BindGender()
@@ -64,7 +66,7 @@ namespace School.admin
 
             ddldesigtination.DataSource = dt;
             ddldesigtination.DataTextField = "DesignationName";
-            ddldesigtination.DataValueField = "DesignationName"; // or GenderID
+            ddldesigtination.DataValueField = "DesignationID"; // or GenderID
             ddldesigtination.DataBind();
 
             ddldesigtination.Items.Insert(0, new ListItem("-- Select Department --", ""));
@@ -98,12 +100,46 @@ namespace School.admin
 
             ddlexp.DataSource = dt;
             ddlexp.DataTextField = "ExperienceRange";
-            ddlexp.DataValueField = "ExperienceRange"; // or GenderID
+            ddlexp.DataValueField = "ExperienceID"; // or GenderID
             ddlexp.DataBind();
 
             ddlexp.Items.Insert(0, new ListItem("-- Select Experience --", ""));
             //BindDepart();
         }
+        protected void Salary_Changed(object sender, EventArgs e)
+        {
+            GenerateSalary();
+        }
+        private void GenerateSalary()
+        {
+            if (ddldesigtination.SelectedIndex == 0 || ddlexp.SelectedIndex == 0)
+            {
+                txtSalary.Text = "";
+                return;
+            }
+
+            using (SqlConnection con = new SqlConnection(
+                ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(@"
+            SELECT BasicSalary 
+            FROM SalaryStructure
+            WHERE DesignationID = @DesignationID
+              AND ExperienceID = @ExperienceID", con);
+
+                cmd.Parameters.AddWithValue("@DesignationID", ddldesigtination.SelectedValue);
+                cmd.Parameters.AddWithValue("@ExperienceID", ddlexp.SelectedValue);
+
+                con.Open();
+                object salary = cmd.ExecuteScalar();
+                con.Close();
+
+                txtSalary.Text = salary != null ? salary.ToString() : "0";
+            }
+        }
+
+
+
 
 
 
@@ -116,8 +152,8 @@ namespace School.admin
             {
                 SqlCommand cmd = new SqlCommand(@" INSERT INTO Add_Teacher(TeacherCode,TeacherName,Department,Designation,JoiningDate,DateOfBirth,Gender,Address,PhoneNumber,EmailAddress,Qualification,Salary,ExperienceYears)
                   VALUES(@TeacherCode,@TeacherName,@Department,@Designation,@JoiningDate,@DateOfBirth,@Gender,@Address,@PhoneNumber,@EmailAddress,@Qualification,@Salary,@ExperienceYears)", con);
-                DateTime dtAdd_Reg = Convert.ToDateTime(txtJoiningDate.Text);
-                DateTime dtBirth_Date = Convert.ToDateTime(txtDOB.Text);
+                DateTime dtAdd_Reg = Convert.ToDateTime(txtjondt.Text);
+                DateTime dtBirth_Date = Convert.ToDateTime(txtbdt.Text);
 
                 cmd.Parameters.AddWithValue("@TeacherCode", txtTeacherId.Text.Trim());
                 cmd.Parameters.AddWithValue("@JoiningDate", dtAdd_Reg.ToString("yyyy-MM-dd"));
@@ -132,19 +168,63 @@ namespace School.admin
                 cmd.Parameters.AddWithValue("@Qualification", ddlquali.SelectedValue);
                 cmd.Parameters.AddWithValue("@ExperienceYears", ddlexp.SelectedValue);
                 cmd.Parameters.AddWithValue("@Salary", txtSalary.Text.Trim());
+
                 con.Open();
                 cmd.ExecuteNonQuery();
-                //txtStudentName.Text = "";
-                //txtDOB.Text = "";
-                //txtClass.Text = "";
-                //txtParentName.Text = "";
-                //txtPhone.Text = "";
-                //txtEmail.Text = "";
-                //txtMessage.Text = "";
-
-
-                this.ClientScript.RegisterStartupScript(this.GetType(), "SweetAlert", "swal('Registered Successfully..!','','success');", true);
+   
             }
+
+            ClearControls();
+            GenerateAdmissionNo();
+
+            // Show SweetAlert without page reload
+            ScriptManager.RegisterStartupScript(
+        this,
+        GetType(),
+        "success",
+        "swal('Registered Successfully!', '', 'success');",
+        true
+    );
+            GenerateAdmissionNo();
         }
+        private void ClearControls()
+        {
+            txtTeacherId.Text = "";
+            txtjondt.Text = "";
+            txtTeacherName.Text = "";
+            txtbdt.Text = "";
+            txtAddress.Text = "";
+            txtPhone.Text = "";
+            txtEmail.Text = "";
+            txtSalary.Text = "";
+  
+
+            ddldeprt.SelectedIndex = 0;
+            ddldesigtination.SelectedIndex = 0;
+            ddlGender.SelectedIndex = 0;
+            ddlquali.SelectedIndex = 0;
+            ddlexp.SelectedIndex = 0;
+
+        }
+
+        private void GenerateAdmissionNo()
+        {
+            int next = 1;
+
+            using (SqlConnection con = new SqlConnection(
+                ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(
+                    "SELECT ISNULL(MAX(CAST(TeacherCode AS INT)),0) FROM Add_Teacher", con);
+
+                con.Open();
+                next = Convert.ToInt32(cmd.ExecuteScalar()) + 1;
+                con.Close();
+            }
+
+            txtTeacherId.Text = next.ToString("000");
+        }
+
+
     }
 }

@@ -193,31 +193,22 @@ namespace School.admin
             
         }
 
-        private string GenerateAdmissionNo()
+        private void GenerateAdmissionNo()
         {
-            string admissionNo = "001";
+            int next = 1;
 
             using (SqlConnection con = new SqlConnection(
                 ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             {
                 SqlCommand cmd = new SqlCommand(
-                    "SELECT MAX(AdmissionNo) FROM Add_Student", con);
+                    "SELECT ISNULL(MAX(CAST(AdmissionNo AS INT)),0) FROM Add_Student", con);
 
                 con.Open();
-                object result = cmd.ExecuteScalar();
+                next = Convert.ToInt32(cmd.ExecuteScalar()) + 1;
                 con.Close();
-
-                int next = 1;
-
-                if (result != DBNull.Value && result != null)
-                {
-                    next = Convert.ToInt32(result) + 1;
-                }
-
-                admissionNo = next.ToString("000");
             }
 
-            return admissionNo;
+            txtaddno.Text = next.ToString("000");
         }
 
 

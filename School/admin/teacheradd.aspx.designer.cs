@@ -42,49 +42,31 @@ namespace School.admin
         protected global::System.Web.UI.WebControls.Label LabelT2;
 
         /// <summary>
-        /// txtJoiningDate control.
+        /// txtjondt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtJoiningDate;
+        protected global::System.Web.UI.WebControls.TextBox txtjondt;
 
         /// <summary>
-        /// LabelT3 control.
+        /// LabelT11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelT3;
+        protected global::System.Web.UI.WebControls.Label LabelT11;
 
         /// <summary>
-        /// ddldeprt control.
+        /// ddlquali control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddldeprt;
-
-        /// <summary>
-        /// LabelT4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelT4;
-
-        /// <summary>
-        /// ddldesigtination control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddldesigtination;
+        protected global::System.Web.UI.WebControls.DropDownList ddlquali;
 
         /// <summary>
         /// LabelT5 control.
@@ -114,13 +96,13 @@ namespace School.admin
         protected global::System.Web.UI.WebControls.Label LabelT6;
 
         /// <summary>
-        /// txtDOB control.
+        /// txtbdt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDOB;
+        protected global::System.Web.UI.WebControls.TextBox txtbdt;
 
         /// <summary>
         /// LabelT7 control.
@@ -195,22 +177,40 @@ namespace School.admin
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
-        /// LabelT11 control.
+        /// LabelT3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelT11;
+        protected global::System.Web.UI.WebControls.Label LabelT3;
 
         /// <summary>
-        /// ddlquali control.
+        /// ddldeprt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlquali;
+        protected global::System.Web.UI.WebControls.DropDownList ddldeprt;
+
+        /// <summary>
+        /// LabelT4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelT4;
+
+        /// <summary>
+        /// ddldesigtination control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddldesigtination;
 
         /// <summary>
         /// LabelT13 control.
