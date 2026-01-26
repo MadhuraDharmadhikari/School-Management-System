@@ -109,7 +109,7 @@
         <script>
 
             function valid() {
-                var addno = document.getElementById('<%=this.txtaddno.ClientID %>').value.trim();
+        <%--        var addno = document.getElementById('<%=this.txtaddno.ClientID %>').value.trim();--%>
                 var adddt = document.getElementById('<%=this.txtadddt.ClientID%>').value.trim();
                 var clas = document.getElementById('<%=this.ddlclass.ClientID%>').value.trim();
                 var section= document.getElementById('<%=this.ddlsection.ClientID%>').value.trim();
@@ -126,7 +126,7 @@
                 let mobilecon = /^\d{10}$/;
                 let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                if (addno === "" || adddt === "" || clas === "" || section === "" || stnm === "" || stdt === "" || stgen === "" || prnm === "" || pradd === "" || prphn === "" || prem === "" || paidfees === "" || paymanetmode === "") {
+                if ( adddt === "" || clas === "" || section === "" || stnm === "" || stdt === "" || stgen === "" || prnm === "" || pradd === "" || prphn === "" || prem === "" || paidfees === "" || paymanetmode === "") {
                     swal("Please fill all details to proceed..!", "", "warning");
                     return false;
                 }
@@ -147,7 +147,7 @@
         </script>
     <script type="text/javascript">
         function clearForm() {
-            document.getElementById('<%= txtaddno.ClientID %>').value = "";
+       <%--     document.getElementById('<%= txtaddno.ClientID %>').value = "";--%>
         document.getElementById('<%= txtadddt.ClientID %>').value = "";
         document.getElementById('<%= txtstnm.ClientID %>').value = "";
         document.getElementById('<%= txtdbt.ClientID %>').value = "";

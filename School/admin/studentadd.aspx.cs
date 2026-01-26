@@ -21,6 +21,8 @@ namespace School.admin
             if (!IsPostBack)
             {
                 BindGender();
+                txtaddno.Text = GenerateAdmissionNo();
+                txtaddno.ReadOnly = true;
             }
         }
 
@@ -127,12 +129,12 @@ namespace School.admin
             using (SqlConnection con = new SqlConnection(
         ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             {
-                SqlCommand cmd = new SqlCommand(@" INSERT INTO Add_Student(AdmissionNo, AdmissionDate, Class, Section, StudentName, DOB, Gender,ParentName, ParentAddress, ParentPhone, ParentEmail,TotalFees, PaidAmount, PendingAmount, PaymentMode)
-                  VALUES( @AdmissionNo, @AdmissionDate, @Class, @Section, @StudentName, @DOB, @Gender, @ParentName, @ParentAddress, @ParentPhone, @ParentEmail, @TotalFees, @PaidAmount, @PendingAmount, @PaymentMode )", con);
+                SqlCommand cmd = new SqlCommand(@" INSERT INTO Add_Student(AdmissionDate, Class, Section, StudentName, DOB, Gender,ParentName, ParentAddress, ParentPhone, ParentEmail,TotalFees, PaidAmount, PendingAmount, PaymentMode)
+                  VALUES(@AdmissionDate, @Class, @Section, @StudentName, @DOB, @Gender, @ParentName, @ParentAddress, @ParentPhone, @ParentEmail, @TotalFees, @PaidAmount, @PendingAmount, @PaymentMode )", con);
                 DateTime dtAdd_Reg = Convert.ToDateTime(txtadddt.Text);
                 DateTime dtBirth_Date = Convert.ToDateTime(txtdbt.Text);
 
-                cmd.Parameters.AddWithValue("@AdmissionNo", txtaddno.Text.Trim());
+                //cmd.Parameters.AddWithValue("@AdmissionNo", txtaddno.Text.Trim());
                 cmd.Parameters.AddWithValue("@AdmissionDate", dtAdd_Reg.ToString("yyyy-MM-dd"));
                 cmd.Parameters.AddWithValue("@Class", ddlclass.SelectedItem.Text);
                 cmd.Parameters.AddWithValue("@Section", ddlsection.SelectedValue);
@@ -184,6 +186,34 @@ namespace School.admin
             ddlGender.SelectedIndex = 0;
             ddlPaymentMode.SelectedIndex = 0;
         }
+
+        private string GenerateAdmissionNo()
+        {
+            string admissionNo = "ADM-001";
+
+            using (SqlConnection con = new SqlConnection(
+                ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(
+                    "SELECT MAX(StudentID) FROM Add_Student", con);
+
+                con.Open();
+                object result = cmd.ExecuteScalar();
+                con.Close();
+
+                int next = 1;
+
+                if (result != DBNull.Value && result != null)
+                {
+                    next = Convert.ToInt32(result) + 1;
+                }
+
+                admissionNo = "ADM-" + next.ToString("000");
+            }
+
+            return admissionNo;
+        }
+
 
     }
 }
