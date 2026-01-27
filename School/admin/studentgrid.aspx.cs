@@ -276,5 +276,22 @@ namespace School.admin
 
             BindStudentGrid(txtSearchName.Text.Trim(), ddlSearchClass.SelectedValue, ddlSearchSection.SelectedValue);
         }
+
+        protected void btnCloseModal_Click(object sender, EventArgs e)
+        {
+            ScriptManager.RegisterStartupScript(
+                this,
+                GetType(),
+                "CloseModal",
+                @"
+        var modalEl = document.getElementById('editModal');
+        var modal = bootstrap.Modal.getInstance(modalEl);
+        if (modal) {
+            modal.hide();
+        }
+        ",
+                true
+            );
+        }
     }
 }

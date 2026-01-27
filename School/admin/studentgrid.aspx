@@ -95,7 +95,7 @@
 
             <div class="modal-header">
                 <h5 class="modal-title">Edit Student</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+               <asp:LinkButton ID="btnCloseModal" runat="server" CssClass="btn-close"  OnClick="btnCloseModal_Click"> </asp:LinkButton>
             </div>
 
             <div class="modal-body">
