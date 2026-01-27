@@ -194,9 +194,9 @@
                                 <div class="item">
                                     <div class="testimonial-content">
                                         <div class="testimonial-text">
-                                            <i class="fa fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                                   <%--         <i class="fa fa-quote-left"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
                                      consectetur adipisicing elit.
-                                     <i class="fa fa-quote-right"></i>
+                                     <i class="fa fa-quote-right"></i>--%>
                                         </div>
                                         <div class="media">
                                             <div class="media-body">

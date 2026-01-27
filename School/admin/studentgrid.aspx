@@ -34,6 +34,7 @@
                 <div class="card-body">
                     <h3 class="card-title mb-4">Registered Students</h3>
                  <%--   Gridview--%>
+                    <div class="table-responsive">
                 <asp:GridView ID="gvStudents" runat="server"
     CssClass="table table-bordered table-striped"
     AutoGenerateColumns="False"
@@ -88,6 +89,7 @@
 
                         </Columns>
                     </asp:GridView>
+                        </div>
                     <!-- EDIT MODAL -->
 <div class="modal fade" id="editModal" tabindex="-1">
     <div class="modal-dialog modal-lg">
