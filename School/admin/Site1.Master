@@ -228,7 +228,7 @@
                             class="icon icon-layout-25"></i><span class="nav-text">ACADEMIC</span></a>
                             <ul aria-expanded="false">
                                 <li><a href="A_classes.aspx">Classes</a></li>
-                                <li><a href="table-bootstrap-basic.html">Subjects</a></li>
+                                <li><a href="A_subject.aspx">Subjects</a></li>
                                 <li><a href="table-bootstrap-basic.html">Timetable</a></li>
                                 <li><a href="table-bootstrap-basic.html">Exams</a></li>
                             </ul>

@@ -74,6 +74,7 @@
     <Content Include="admin\authetication\Login.aspx" />
     <Content Include="admin\authetication\Register.aspx" />
     <Content Include="admin\A_classes.aspx" />
+    <Content Include="admin\A_subject.aspx" />
     <Content Include="admin\contactgrid.aspx" />
     <Content Include="admin\css\perfect-scrollbar.css" />
     <Content Include="admin\css\style.css" />
@@ -3658,6 +3659,13 @@
     </Compile>
     <Compile Include="admin\A_classes.aspx.designer.cs">
       <DependentUpon>A_classes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\A_subject.aspx.cs">
+      <DependentUpon>A_subject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\A_subject.aspx.designer.cs">
+      <DependentUpon>A_subject.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\contactgrid.aspx.cs">
       <DependentUpon>contactgrid.aspx</DependentUpon>
