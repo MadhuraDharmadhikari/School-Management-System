@@ -76,7 +76,7 @@
                                         CssClass="btn btn-sm btn-primary"
                                         CommandName="EditTeacher"
                                         CommandArgument='<%# Eval("TeacherID") %>'>
-                    Edit
+                                            Edit
                                     </asp:LinkButton>
 
                                     <asp:LinkButton ID="btnDelete"
@@ -85,7 +85,7 @@
                                         CommandName="Delete"
                                         CommandArgument='<%# Eval("TeacherID") %>'
                                         OnClientClick="return confirm('Are you sure?');">
-                    Delete
+                                        Delete
                                     </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
