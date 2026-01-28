@@ -63,31 +63,45 @@
             </div>
          <div class="col-md-6">
          <asp:Label runat="server" Text="City*" style="font-weight: 500;" />
-        <asp:TextBox ID="TextBox2" runat="server" TextMode="Email" Width="100%" style=" margin-top:10px;margin-bottom:20px ; margin-bottom:20px"  placeholder="City"/>
+        <asp:TextBox ID="txtcity" runat="server"  Width="100%" style=" margin-top:10px;margin-bottom:20px ; margin-bottom:20px"  placeholder="City"/>
             </div>
 
        <div class="col-md-6">
     <asp:Label runat="server" Text="Select Feedback Type*" style="font-weight: 500;" />
-    <asp:TextBox ID="TextBox1" runat="server" TextMode="Phone" Width="100%" style=" margin-top:10px; margin-bottom:20px"  placeholder="Select Curriculum"/>
+  <asp:DropDownList ID="ddlFeedbackType" runat="server"
+    CssClass="form-control"
+    style="margin-top:10px; margin-bottom:20px;">
+    
+    <asp:ListItem Text="-- Select Feedback Type --" Value="" />
+    <asp:ListItem Text="Teaching Quality" Value="Teaching Quality" />
+    <asp:ListItem Text="Infrastructure" Value="Infrastructure" />
+    <asp:ListItem Text="Facilities" Value="Facilities" />
+    <asp:ListItem Text="Administration" Value="Administration" />
+    <asp:ListItem Text="Discipline" Value="Discipline" />
+    <asp:ListItem Text="Overall Experience" Value="Overall Experience" />
+</asp:DropDownList>
         </div>
      <div class="col-md-6">
           <asp:Label runat="server" Text="Rate Us*" style="font-weight: 500;margin-top:50px;" />
 <div class="rating">
-    <input type="radio" name="rating" id="star5" value="5">
+    <input type="radio" name="rating" id="star5" value="5" onclick="setRating(5)">
     <label for="star5">★</label>
 
-    <input type="radio" name="rating" id="star4" value="4">
+    <input type="radio" name="rating" id="star4" value="4" onclick="setRating(4)">
     <label for="star4">★</label>
 
-    <input type="radio" name="rating" id="star3" value="3">
+    <input type="radio" name="rating" id="star3" value="3" onclick="setRating(3)">
     <label for="star3">★</label>
 
-    <input type="radio" name="rating" id="star2" value="2">
+    <input type="radio" name="rating" id="star2" value="2" onclick="setRating(2)">
     <label for="star2">★</label>
 
-    <input type="radio" name="rating" id="star1" value="1">
+    <input type="radio" name="rating" id="star1" value="1" onclick="setRating(1)">
     <label for="star1">★</label>
 </div>
+
+    <asp:HiddenField ID="hfRating" runat="server" />
+
         </div>
 
             <div class="col-md-12">
@@ -96,7 +110,7 @@
             </div>
         </div>
 
-        <asp:Button ID="btnSubmit" runat="server" Onclientclick="return valid()" Text="Submit Enquiry"  CssClass="btn btn-success" style="font-weight: 500;" />
+        <asp:Button ID="btnSubmit" runat="server" Onclientclick="return valid()" Text="Submit Enquiry"  CssClass="btn btn-success" style="font-weight: 500;" OnClick="btnSubmit_Click" />
     </div>
     <br />
     <br />
@@ -104,18 +118,17 @@
         <script>
 
             function valid() {
-             <%--   var name = document.getElementById('<%=this.txtStudentName.ClientID %>').value.trim();
-                  var dob = document.getElementById('<%=this.txtDOB.ClientID%>').value.trim();--%>
-             <%--   var clas = document.getElementById('<%=this.txtClass.ClientID%>').value.trim();--%>
-             <%--   var parent = document.getElementById('<%=this.txtParentName.ClientID%>').value.trim();
+                var parent = document.getElementById('<%=this.txtParentName.ClientID%>').value.trim();
                 var contact = document.getElementById('<%=this.txtPhone.ClientID%>').value.trim();
                 var email = document.getElementById('<%=this.txtEmail.ClientID%>').value.trim();
-                var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();--%>
+                var city = document.getElementById('<%=this.txtcity.ClientID%>').value.trim();
+                var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();
+                var feedback = document.getElementById('<%=this.ddlFeedbackType.ClientID%>').value.trim();
 
                 let mobilecon = /^\d{10}$/;
                 let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                if (name === "" || dob === "" || clas === "" || parent === "" || contact === "" || email === "" || msg === "") {
+                if (feedback === "" || city === "" || parent === "" || contact === "" || email === "" || msg === "") {
                     swal("Please fill all details to proceed..!", "", "warning");
                     return false;
                 }
@@ -129,9 +142,32 @@
                     swal("Please enter a valid Email ID.", "", "warning");
                     return false;
                 }
+                var rating = document.getElementById('<%= hfRating.ClientID %>').value;
+
+                if (rating === "") {
+                    swal("Please select a rating!", "", "warning");
+                    return false;
+                }
 
                 return true;
             }
         </script>
+    <script>
+        function setRating(value) {
+            document.getElementById('<%= hfRating.ClientID %>').value = value;
+        }
+    </script>
+     <script type="text/javascript">
+         function clearForm() {
+<%--     document.getElementById('<%= txtaddno.ClientID %>').value = "";--%>
+         document.getElementById('<%= txtParentName.ClientID %>').value = "";
+         document.getElementById('<%= txtEmail.ClientID %>').value = "";
+         document.getElementById('<%= txtPhone.ClientID %>').value = "";
+         document.getElementById('<%= txtcity.ClientID %>').value = "";
+         document.getElementById('<%= txtMessage.ClientID %>').value = "";
+         document.getElementById('<%= hfRating.ClientID %>').value = "";
+         document.getElementById('<%= ddlFeedbackType.ClientID %>').selectedIndex = 0;
+         }
+     </script>
 
 </asp:Content>
