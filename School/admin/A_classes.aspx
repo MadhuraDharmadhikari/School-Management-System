@@ -48,6 +48,9 @@
                         CssClass="table table-bordered"
                         AutoGenerateColumns="False"
                         DataKeyNames="ClassSectionID"
+                        AllowPaging="true"
+                        PageSize="10"
+                        OnPageIndexChanging="gvClassSection_PageIndexChanging"
                         OnRowCommand="gvClassSection_RowCommand">
 
                         <Columns>
@@ -61,8 +64,8 @@
                                     <asp:LinkButton ID="btnEdit" runat="server"
                                         CommandName="EditRow"
                                         CommandArgument='<%# Eval("ClassSectionID") %>'
-                                         CssClass="btn btn-sm btn-primary">
-                                                  Edit
+                                        CssClass="btn btn-sm btn-primary">
+                                         Edit
                                     </asp:LinkButton>
 
                                     <asp:LinkButton ID="btnDelete" runat="server"
@@ -70,14 +73,13 @@
                                         CommandArgument='<%# Eval("ClassSectionID") %>'
                                         CssClass="btn btn-sm btn-danger ms-2"
                                         OnClientClick="return confirm('Are you sure?');">
-                                          Delete
+                                        Delete
                                     </asp:LinkButton>
-
-                          
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
+
                     <!-- EDIT MODAL -->
                     <div class="modal fade" id="editModal" tabindex="-1">
                         <div class="modal-dialog">

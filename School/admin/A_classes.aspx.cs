@@ -153,6 +153,11 @@ namespace School.admin
             LoadGrid();
         }
 
+        protected void gvClassSection_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvClassSection.PageIndex = e.NewPageIndex;
+            LoadGrid();
+        }
 
         void LoadGrid()
         {
