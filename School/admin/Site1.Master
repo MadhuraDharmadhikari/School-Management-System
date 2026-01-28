@@ -218,7 +218,7 @@
                               <ul aria-expanded="false">
                                    <li> <a href="contactgrid.aspx"><i class="fas fa-address-book"></i>Contact Messages List</a></li>
                                   <li><a href="fastenquregrid.aspx"> <i class="fas fa-question-circle"></i>Fast Enquiries List</a></li>
-                                  <li><a href="enquregrid.aspx"> <i class="fas fa-question-circle"></i>Enquiries List</a></li>
+                                  <li><a href="enqurgrid.aspx"> <i class="fas fa-question-circle"></i>Enquiries List</a></li>
                                   <li><a href="feedbackgrid.aspx"> <i class="fas fa-question-circle"></i>Feedback List</a></li>
                               </ul>
                           </li>

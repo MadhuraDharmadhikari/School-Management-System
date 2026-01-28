@@ -77,6 +77,7 @@
     <Content Include="admin\css\perfect-scrollbar.css" />
     <Content Include="admin\css\style.css" />
     <Content Include="admin\default.aspx" />
+    <Content Include="admin\enqurgrid.aspx" />
     <Content Include="admin\fastenquregrid.aspx" />
     <Content Include="admin\icons\avasta\css\style.css" />
     <Content Include="admin\icons\avasta\fonts\avasta.svg" />
@@ -3662,6 +3663,13 @@
     </Compile>
     <Compile Include="admin\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\enqurgrid.aspx.cs">
+      <DependentUpon>enqurgrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\enqurgrid.aspx.designer.cs">
+      <DependentUpon>enqurgrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\fastenquregrid.aspx.cs">
       <DependentUpon>fastenquregrid.aspx</DependentUpon>
