@@ -11,7 +11,7 @@ namespace School.admin
 {
 
 
-    public partial class fastenqure
+    public partial class fastenquregrid
     {
 
         /// <summary>
