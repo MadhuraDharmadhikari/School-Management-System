@@ -216,7 +216,7 @@
                           <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="fas fa-envelope-open-text"></i><span class="nav-text">INQUIRIES</span></a>
                               <ul aria-expanded="false">
-                                   <li> <a href="#"><i class="fas fa-address-book"></i>Contact Messages List</a></li>
+                                   <li> <a href="contactgrid.aspx"><i class="fas fa-address-book"></i>Contact Messages List</a></li>
                                   <li><a href="#"> <i class="fas fa-question-circle"></i>  Enquiries List</a></li>
                               </ul>
                           </li>
