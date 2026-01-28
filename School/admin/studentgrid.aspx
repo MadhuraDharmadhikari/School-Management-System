@@ -52,14 +52,10 @@
                         <Columns>
                                    
                             <asp:BoundField DataField="AdmissionNo" HeaderText="Admission No" />
-             <%--               <asp:BoundField DataField="AdmissionDate" HeaderText="Admission Date" DataFormatString="{0:yyyy-MM-dd}" />--%>
+    
                               <asp:BoundField DataField="StudentName" HeaderText="Student Name" />
                             <asp:BoundField DataField="Class" HeaderText="Class" />
-                 <%--           <asp:BoundField DataField="Section" HeaderText="Section" />--%>
-                          
-                       <%--     <asp:BoundField DataField="DOB" HeaderText="DOB" DataFormatString="{0:yyyy-MM-dd}" />
-                            <asp:BoundField DataField="Gender" HeaderText="Gender" />
-                            <asp:BoundField DataField="ParentName" HeaderText="Parent Name" />--%>
+              
                            
                             <asp:BoundField DataField="TotalFees" HeaderText="Total Fees" />
                             <asp:BoundField DataField="PaidAmount" HeaderText="Paid Amount" />
@@ -106,7 +102,7 @@
                 <div class="row">
                    <div class="col-md-4 mb-3">
        <asp:Label ID="Label5" runat="server" Text="Admission No" Font-Bold="true" Style="margin-top: 10px"></asp:Label>
-       <asp:TextBox ID="txtaddno" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px"></asp:TextBox>
+       <asp:TextBox ID="txtaddno" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" ReadOnly="true"></asp:TextBox>
            </div>
 
                 <div class="mb-3 col-md-4 ">

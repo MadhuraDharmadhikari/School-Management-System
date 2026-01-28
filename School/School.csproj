@@ -79,6 +79,7 @@
     <Content Include="admin\default.aspx" />
     <Content Include="admin\enqurgrid.aspx" />
     <Content Include="admin\fastenquregrid.aspx" />
+    <Content Include="admin\feedbackgrid.aspx" />
     <Content Include="admin\icons\avasta\css\style.css" />
     <Content Include="admin\icons\avasta\fonts\avasta.svg" />
     <Content Include="admin\icons\font-awesome-old\css\font-awesome.min.css" />
@@ -3677,6 +3678,13 @@
     </Compile>
     <Compile Include="admin\fastenquregrid.aspx.designer.cs">
       <DependentUpon>fastenquregrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\feedbackgrid.aspx.cs">
+      <DependentUpon>feedbackgrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\feedbackgrid.aspx.designer.cs">
+      <DependentUpon>feedbackgrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

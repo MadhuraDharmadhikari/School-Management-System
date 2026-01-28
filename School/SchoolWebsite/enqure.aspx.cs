@@ -19,6 +19,22 @@ namespace School.SchoolWebsite
             if (!IsPostBack)
             {
                 BindClass();
+                if (Session["AdmissionSuccess"] != null)
+                {
+                    ScriptManager.RegisterStartupScript(
+                        this,
+                        GetType(),
+                        "success",
+                        "swal('Registered Successfully!', '', 'success');",
+                        true
+                    );
+
+                    // Clear form after success
+                    ClearControls();
+
+                    // Remove session so it won’t repeat
+                    Session.Remove("AdmissionSuccess");
+                }
             }
         }
 
@@ -60,7 +76,11 @@ ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             }
             ClearControls();
 
-            // Clear fields
+            // Set success flag
+            Session["AdmissionSuccess"] = true;
+
+            // Redirect (VERY IMPORTANT)
+            Response.Redirect("enqure.aspx");
 
 
             // Show SweetAlert without page reload

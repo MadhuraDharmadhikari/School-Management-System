@@ -119,22 +119,23 @@ namespace School.admin
 
         protected void gvTeachers_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            string teacherCode = gvTeachers.DataKeys[e.RowIndex].Value.ToString();
+            string teacherID = gvTeachers.DataKeys[e.RowIndex].Value.ToString();
 
             GridViewRow row = gvTeachers.Rows[e.RowIndex];
 
-            string teacherName = ((TextBox)row.Cells[1].Controls[0]).Text.Trim();
-            string department = ((TextBox)row.Cells[2].Controls[0]).Text.Trim();
-            string designation = ((TextBox)row.Cells[3].Controls[0]).Text.Trim();
-            string joiningDate = ((TextBox)row.Cells[4].Controls[0]).Text.Trim();
-            string dob = ((TextBox)row.Cells[5].Controls[0]).Text.Trim();
-            string gender = ((TextBox)row.Cells[6].Controls[0]).Text.Trim();
-            string address = ((TextBox)row.Cells[7].Controls[0]).Text.Trim();
-            string phone = ((TextBox)row.Cells[8].Controls[0]).Text.Trim();
-            string email = ((TextBox)row.Cells[9].Controls[0]).Text.Trim();
-            string qualification = ((TextBox)row.Cells[10].Controls[0]).Text.Trim();
-            string experience = ((TextBox)row.Cells[11].Controls[0]).Text.Trim();
-            string salary = ((TextBox)row.Cells[12].Controls[0]).Text.Trim();
+            string teacherCode = ((TextBox)row.Cells[1].Controls[0]).Text.Trim();
+            string teacherName = ((TextBox)row.Cells[2].Controls[0]).Text.Trim();
+            string department = ((TextBox)row.Cells[3].Controls[0]).Text.Trim();
+            string designation = ((TextBox)row.Cells[4].Controls[0]).Text.Trim();
+            string joiningDate = ((TextBox)row.Cells[5].Controls[0]).Text.Trim();
+            string dob = ((TextBox)row.Cells[6].Controls[0]).Text.Trim();
+            string gender = ((TextBox)row.Cells[7].Controls[0]).Text.Trim();
+            string address = ((TextBox)row.Cells[8].Controls[0]).Text.Trim();
+            string phone = ((TextBox)row.Cells[9].Controls[0]).Text.Trim();
+            string email = ((TextBox)row.Cells[10].Controls[0]).Text.Trim();
+            string qualification = ((TextBox)row.Cells[11].Controls[0]).Text.Trim();
+            string experience = ((TextBox)row.Cells[12].Controls[0]).Text.Trim();
+            string salary = ((TextBox)row.Cells[13].Controls[0]).Text.Trim();
 
             SqlCommand cmd = new SqlCommand(@"UPDATE Add_Teacher 
                                              SET TeacherCode=@TeacherCode,TeacherName=@TeacherName, Department=@Department, Designation=@Designation,
@@ -144,6 +145,7 @@ namespace School.admin
                                              WHERE TeacherID=@TeacherID", con);
 
             cmd.Parameters.AddWithValue("@TeacherCode", teacherCode);
+            cmd.Parameters.AddWithValue("@TeacherID", teacherID);
             cmd.Parameters.AddWithValue("@TeacherName", teacherName);
             cmd.Parameters.AddWithValue("@Department", department);
             cmd.Parameters.AddWithValue("@Designation", designation);
@@ -167,9 +169,9 @@ namespace School.admin
 
         protected void gvTeachers_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            string teacherCode = gvTeachers.DataKeys[e.RowIndex].Value.ToString();
-            SqlCommand cmd = new SqlCommand("DELETE FROM Add_Teacher WHERE TeacherCode=@TeacherCode", con);
-            cmd.Parameters.AddWithValue("@TeacherCode", teacherCode);
+            string teacherID = gvTeachers.DataKeys[e.RowIndex].Value.ToString();
+            SqlCommand cmd = new SqlCommand("DELETE FROM Add_Teacher WHERE TeacherID=@TeacherID", con);
+            cmd.Parameters.AddWithValue("@TeacherID", teacherID);
 
             con.Open();
             cmd.ExecuteNonQuery();
@@ -182,18 +184,18 @@ namespace School.admin
         {
             if (e.CommandName == "EditTeacher")
             {
-                string teacherCode = e.CommandArgument.ToString();
+                string teacherID = e.CommandArgument.ToString();
 
                 SqlCommand cmd = new SqlCommand(
                     "SELECT * FROM Add_Teacher WHERE TeacherID=@TeacherID", con);
-                cmd.Parameters.AddWithValue("@TeacherID", teacherCode);
+                cmd.Parameters.AddWithValue("@TeacherID", teacherID);
 
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.Read())
                 {
-                    hfTeacherCode.Value = dr["TeacherID"].ToString();
+                    hfTeacherID.Value = dr["TeacherID"].ToString();
                     txtid.Text = dr["TeacherCode"].ToString();
                     txtTeachenm.Text = dr["TeacherName"].ToString();
                     txtdepart.Text = dr["Department"].ToString();
@@ -266,7 +268,7 @@ namespace School.admin
             WHERE TeacherID = @TeacherID", con);
 
 
-            cmd.Parameters.AddWithValue("@TeacherID", hfTeacherCode.Value);
+            cmd.Parameters.AddWithValue("@TeacherID", hfTeacherID.Value);
             cmd.Parameters.AddWithValue("@TeacherCode", txtid.Text);
             cmd.Parameters.AddWithValue("@TeacherName", txtTeachenm.Text);
             cmd.Parameters.AddWithValue("@Department", txtdepart.Text);

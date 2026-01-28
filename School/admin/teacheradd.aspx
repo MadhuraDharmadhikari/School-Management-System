@@ -18,13 +18,13 @@
                             <!-- Teacher ID -->
                             <div class="col-md-3 mt-4">
                                 <asp:Label ID="LabelT1" runat="server" Text="Teacher ID" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtTeacherId" CssClass="form-control card-title" runat="server" Style="margin-top: 10px" BackColor="#f0f0f0" placeholder="Teacher ID"></asp:TextBox>
+                                <asp:TextBox ID="txtTeacherId" CssClass="form-control" runat="server" Style="margin-top: 10px" BackColor="#f0f0f0" placeholder="Teacher ID"></asp:TextBox>
                             </div>
 
                             <!-- Joining Date -->
                             <div class="col-md-3 mt-4">
                                 <asp:Label ID="LabelT2" runat="server" Text="Joining Date" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtjondt" CssClass="form-control card-title" runat="server" Style="margin-top: 10px" TextMode="Date"></asp:TextBox>
+                                <asp:TextBox ID="txtjondt" CssClass="form-control" runat="server" Style="margin-top: 10px" TextMode="Date"></asp:TextBox>
                             </div>
 
 
@@ -38,13 +38,13 @@
                             <!-- Teacher Name -->
                             <div class="col-md-6 mt-3">
                                 <asp:Label ID="LabelT5" runat="server" Text="Teacher Name" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtTeacherName" CssClass="form-control card-title" runat="server" Style="margin-top: 10px" placeholder="Teacher Name"></asp:TextBox>
+                                <asp:TextBox ID="txtTeacherName" CssClass="form-control" runat="server" Style="margin-top: 10px" placeholder="Teacher Name"></asp:TextBox>
                             </div>
 
                             <!-- DOB -->
                             <div class="col-md-3 mt-3">
                                 <asp:Label ID="LabelT6" runat="server" Text="Date of Birth" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtbdt" CssClass="form-control card-title" runat="server" Style="margin-top: 10px" TextMode="Date"></asp:TextBox>
+                                <asp:TextBox ID="txtbdt" CssClass="form-control" runat="server" Style="margin-top: 10px" TextMode="Date"></asp:TextBox>
                             </div>
 
                             <!-- Gender -->
@@ -56,19 +56,19 @@
                             <!-- Address -->
                             <div class="col-md-6 mt-3">
                                 <asp:Label ID="LabelT8" runat="server" Text="Address" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtAddress" CssClass="form-control card-title" runat="server" Style="margin-top: 10px" placeholder="Address"></asp:TextBox>
+                                <asp:TextBox ID="txtAddress" CssClass="form-control" runat="server" Style="margin-top: 10px" placeholder="Address"></asp:TextBox>
                             </div>
 
                             <!-- Phone -->
                             <div class="col-md-3 mt-3">
                                 <asp:Label ID="LabelT9" runat="server" Text="Phone Number" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtPhone" CssClass="form-control card-title" runat="server" Style="margin-top: 10px" placeholder="Phone Number"></asp:TextBox>
+                                <asp:TextBox ID="txtPhone" CssClass="form-control" runat="server" Style="margin-top: 10px" placeholder="Phone Number"></asp:TextBox>
                             </div>
 
                             <!-- Email -->
                             <div class="col-md-3 mt-3">
                                 <asp:Label ID="LabelT10" runat="server" Text="Email Address" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtEmail" CssClass="form-control card-title" runat="server" Style="margin-top: 10px" placeholder="Email Address"></asp:TextBox>
+                                <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" Style="margin-top: 10px" placeholder="Email Address"></asp:TextBox>
                             </div>
 
                                                  <!-- Department -->
@@ -92,7 +92,7 @@
                             <!-- Salary -->
                             <div class="col-md-3 mt-3">
                                 <asp:Label ID="LabelT12" runat="server" Text="Salary" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtSalary" CssClass="form-control card-title" runat="server" Style="margin-top: 10px" placeholder="Salary" ReadOnly="true"  BackColor="#f0f0f0"></asp:TextBox>
+                                <asp:TextBox ID="txtSalary" CssClass="form-control" runat="server" Style="margin-top: 10px" placeholder="Salary" ReadOnly="true"  BackColor="#f0f0f0"></asp:TextBox>
                             </div>
 
 

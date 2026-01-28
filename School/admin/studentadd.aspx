@@ -24,11 +24,11 @@
                             <div class="row">
                                 <div class="col-md-3 mt-4">
                                     <asp:Label ID="Label5" runat="server" Text="Admission No" Font-Bold="true" Style="margin-top: 10px"></asp:Label>
-                                    <asp:TextBox ID="txtaddno" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Admission No"></asp:TextBox>
+                                    <asp:TextBox ID="txtaddno" CssClass="form-control" runat="server" Text="" Style="margin-top: 10px" placeholder="Admission No"></asp:TextBox>
                                 </div>
                                 <div class="col-md-3 mt-4">
                                     <asp:Label ID="Label6" runat="server" Text="Admission Date" Font-Bold="true" Style="margin-top: 10px"></asp:Label>
-                                    <asp:TextBox ID="txtadddt" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" TextMode="Date" placeholder="Admission Date"></asp:TextBox>
+                                    <asp:TextBox ID="txtadddt" CssClass="form-control" runat="server" Text="" Style="margin-top: 10px" TextMode="Date" placeholder="Admission Date"></asp:TextBox>
                                 </div>
                                 <div class="col-md-3 mt-4">
                                     <asp:Label ID="Label3" runat="server" Text="Class" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
@@ -40,11 +40,11 @@
                                 </div>
                                 <div class="col-md-6 mt-3">
                                     <asp:Label ID="Label7" runat="server" Text="Student Name" Font-Bold="true" Style="margin-top: 10px"></asp:Label>
-                                    <asp:TextBox ID="txtstnm" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Student Name"></asp:TextBox>
+                                    <asp:TextBox ID="txtstnm" CssClass="form-control" runat="server" Text="" Style="margin-top: 10px" placeholder="Student Name"></asp:TextBox>
                                 </div>
                                 <div class="col-md-3 mt-3">
                                     <asp:Label ID="Label1" runat="server" Text="Date of Birth" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
-                                    <asp:TextBox ID="txtdbt" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" TextMode="Date"></asp:TextBox>
+                                    <asp:TextBox ID="txtdbt" CssClass="form-control" runat="server" Text="" Style="margin-top: 10px" TextMode="Date"></asp:TextBox>
                                 </div>
                                 <div class="col-md-3 mt-3">
                                     <asp:Label ID="Label2" runat="server" Text="Gender" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
@@ -52,36 +52,36 @@
                                 </div>
                                 <div class="col-md-6 mt-3">
                                     <asp:Label ID="Label8" runat="server" Text="Parent Name" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
-                                    <asp:TextBox ID="txtprnm" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Parent Name"></asp:TextBox>
+                                    <asp:TextBox ID="txtprnm" CssClass="form-control" runat="server" Text="" Style="margin-top: 10px" placeholder="Parent Name"></asp:TextBox>
                                 </div>
                                 <div class="col-md-6 mt-3">
                                     <asp:Label ID="Label9" runat="server" Text="Parent Addres" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
-                                    <asp:TextBox ID="txtpradd" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Parent Addres"></asp:TextBox>
+                                    <asp:TextBox ID="txtpradd" CssClass="form-control" runat="server" Text="" Style="margin-top: 10px" placeholder="Parent Addres"></asp:TextBox>
                                 </div>
                                 <div class="col-md-6 mt-3">
                                     <asp:Label ID="Label10" runat="server" Text="Parent Phone" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
-                                    <asp:TextBox ID="txtprph" CssClass="form-control card-title" TextMode="Phone" runat="server" Text="" Style="margin-top: 10px" placeholder="Parent Phone"></asp:TextBox>
+                                    <asp:TextBox ID="txtprph" CssClass="form-control" TextMode="Phone" runat="server" Text="" Style="margin-top: 10px" placeholder="Parent Phone"></asp:TextBox>
                                 </div>
                                 <div class="col-md-6 mt-3">
                                     <asp:Label ID="Label11" runat="server" Text="Parent Email" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
-                                    <asp:TextBox ID="txtprem" CssClass="form-control card-title" runat="server" TextMode="Email" Text="" Style="margin-top: 10px" placeholder="Parent Email"></asp:TextBox>
+                                    <asp:TextBox ID="txtprem" CssClass="form-control" runat="server" TextMode="Email" Text="" Style="margin-top: 10px" placeholder="Parent Email"></asp:TextBox>
                                 </div>
                                 <div class="col-md-3 mt-3">
                                     <asp:Label ID="Label12" runat="server" Text="Total Fees" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
-                                    <asp:TextBox ID="txttotalfee" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Total Fees"    ReadOnly="true"></asp:TextBox>
+                                    <asp:TextBox ID="txttotalfee" CssClass="form-control" runat="server" Text="" Style="margin-top: 10px" placeholder="Total Fees"    ReadOnly="true"></asp:TextBox>
                                 </div>
                                 <div class="col-md-3 mt-3">
                                     <asp:Label ID="Label13" runat="server" Text="Paid Amount" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
-                                    <asp:TextBox ID="txtpaidfee" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Paid Amount" AutoPostBack="true" OnTextChanged="txtPaidAmount_TextChanged"></asp:TextBox>
+                                    <asp:TextBox ID="txtpaidfee" CssClass="form-control" runat="server" Text="" Style="margin-top: 10px" placeholder="Paid Amount" AutoPostBack="true" OnTextChanged="txtPaidAmount_TextChanged"></asp:TextBox>
                                 </div>
                                 <div class="col-md-3 mt-3">
                                     <asp:Label ID="Label14" runat="server" Text="Pending Amount" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
-                                    <asp:TextBox ID="txtpendingfee" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Pending Amount" ReadOnly="true"></asp:TextBox>
+                                    <asp:TextBox ID="txtpendingfee" CssClass="form-control" runat="server" Text="" Style="margin-top: 10px" placeholder="Pending Amount" ReadOnly="true"></asp:TextBox>
                                 </div>
                                 <div class="col-md-3 mt-3">
                                     <asp:Label ID="Label15" runat="server" Text="Payment Mode" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
 
-                                    <asp:DropDownList ID="ddlPaymentMode" runat="server" CssClass="form-control card-title" Style="margin-top: 10px">
+                                    <asp:DropDownList ID="ddlPaymentMode" runat="server" CssClass="form-control" Style="margin-top: 10px">
                                         <asp:ListItem Text="-- Select Payment Mode --" Value="" />
                                         <asp:ListItem Text="Cash" Value="Cash" />
                                         <asp:ListItem Text="Online" Value="Online" />

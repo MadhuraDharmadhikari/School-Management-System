@@ -78,13 +78,13 @@ namespace School.admin
         protected global::System.Web.UI.WebControls.LinkButton btnCloseModal;
 
         /// <summary>
-        /// hfTeacherCode control.
+        /// hfTeacherID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfTeacherCode;
+        protected global::System.Web.UI.WebControls.HiddenField hfTeacherID;
 
         /// <summary>
         /// Label1 control.
@@ -229,15 +229,6 @@ namespace School.admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhoneModal;
-
-        /// <summary>
-        /// btnCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
 
         /// <summary>
         /// btnUpdateTeacher control.

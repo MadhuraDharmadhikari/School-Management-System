@@ -14,7 +14,24 @@ namespace School.SchoolWebsite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack) {
+                if (Session["AdmissionSuccess"] != null)
+                {
+                    ScriptManager.RegisterStartupScript(
+                        this,
+                        GetType(),
+                        "success",
+                        "swal('Registered Successfully!', '', 'success');",
+                        true
+                    );
 
+                    // Clear form after success
+                    ClearForm();
+
+                    // Remove session so it won’t repeat
+                    Session.Remove("AdmissionSuccess");
+                }
+            }
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -40,6 +57,11 @@ namespace School.SchoolWebsite
             cmd.ExecuteNonQuery();
             con.Close();
             ClearForm();
+            // Set success flag
+            Session["AdmissionSuccess"] = true;
+
+            // Redirect (VERY IMPORTANT)
+            Response.Redirect("feedback.aspx");
             ScriptManager.RegisterStartupScript(
 
                 this,

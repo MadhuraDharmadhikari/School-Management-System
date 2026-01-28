@@ -75,7 +75,7 @@
                                         runat="server"
                                         CssClass="btn btn-sm btn-primary"
                                         CommandName="EditTeacher"
-                                        CommandArgument='<%# Eval("TeacherCode") %>'>
+                                        CommandArgument='<%# Eval("TeacherID") %>'>
                     Edit
                                     </asp:LinkButton>
 
@@ -83,7 +83,7 @@
                                         runat="server"
                                         CssClass="btn btn-sm btn-danger ms-2"
                                         CommandName="Delete"
-                                        CommandArgument='<%# Eval("TeacherCode") %>'
+                                        CommandArgument='<%# Eval("TeacherID") %>'
                                         OnClientClick="return confirm('Are you sure?');">
                     Delete
                                     </asp:LinkButton>
@@ -104,12 +104,12 @@
 
                                 <div class="modal-body">
 
-                                    <asp:HiddenField ID="hfTeacherCode" runat="server" />
+                                    <asp:HiddenField ID="hfTeacherID" runat="server" />
 
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <asp:Label ID="Label1" runat="server" Text="Teacher ID" Font-Bold="true"></asp:Label>
-                                            <asp:TextBox ID="txtid" runat="server" CssClass="form-control" />
+                                            <asp:TextBox ID="txtid" runat="server" CssClass="form-control" ReadOnly="true" />
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <asp:Label ID="lblTeacherName" runat="server" Text="Teacher Name" Font-Bold="true"></asp:Label>
@@ -138,7 +138,7 @@
 
                                         <div class="col-md-6 mb-3">
                                             <asp:Label ID="lblSalary" runat="server" Text="Salary" Font-Bold="true"></asp:Label>
-                                            <asp:TextBox ID="txtSalaryModal" runat="server" CssClass="form-control" ReadOnly="true" />
+                                            <asp:TextBox ID="txtSalaryModal" runat="server" CssClass="form-control"  />
                                         </div>
 
                                         <div class="col-md-6 mb-3">
@@ -150,11 +150,6 @@
                                 </div>
 
                                 <div class="modal-footer">
-                                    <asp:Button ID="btnCancel" runat="server"
-                                        CssClass="btn btn-secondary"
-                                        Text="Cancel"
-                                        OnClientClick="closeEditModal(); return false;" />
-
                                     <asp:Button ID="btnUpdateTeacher" runat="server" CssClass="btn btn-success" Text="Update" OnClick="btnUpdateTeacher_Click1" />
                                 </div>
 
