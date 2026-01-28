@@ -38,7 +38,7 @@
 
                             <asp:BoundField DataField="ParentName" HeaderText="Parent Name" />
                             <asp:BoundField DataField="EmailAddress" HeaderText="Email Address" />
-                                <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" />
+                          <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" />
                             <asp:BoundField DataField="Address" HeaderText="Address" />
                             <asp:BoundField DataField="Class" HeaderText="Class" />
                             <asp:BoundField DataField="AdditionalMessage" HeaderText="Additional Message" />
