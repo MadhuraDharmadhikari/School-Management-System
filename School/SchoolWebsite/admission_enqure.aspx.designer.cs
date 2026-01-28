@@ -42,6 +42,15 @@ namespace School.SchoolWebsite
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
 
         /// <summary>
+        /// Label6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
+
+        /// <summary>
         /// txtcity control.
         /// </summary>
         /// <remarks>
@@ -51,31 +60,22 @@ namespace School.SchoolWebsite
         protected global::System.Web.UI.WebControls.TextBox txtcity;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// txtselect control.
+        /// ddlclass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtselect;
-
-        /// <summary>
-        /// txtselegrade control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtselegrade;
+        protected global::System.Web.UI.WebControls.DropDownList ddlclass;
 
         /// <summary>
         /// txtMessage control.

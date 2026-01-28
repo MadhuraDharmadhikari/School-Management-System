@@ -22,45 +22,46 @@
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2)";"">
       
-        <h2 style="color: rgb(22, 22, 87);font-size: 3rem;">Admission Enquiry Form</h2><br />
+           <h2 style="color: rgb(22, 22, 87);font-size: 3rem;">Admission Enquiry Form</h2><br />
 
         <div class="row">
             <div class="col-md-6">
-               <asp:Label runat="server" Text="Parent Name*" style="font-weight: 500;" />
-               <asp:TextBox ID="txtParentName" runat="server" Width="100%" style=" margin-top:10px"  placeholder="Parent Name"/>
+               <asp:Label runat="server" Text="Parent Name*"  Font-Bold="true" Style="margin-top: 10px" />
+               <asp:TextBox ID="txtParentName" CssClass="form-control card-title" runat="server"  style=" margin-top:10px"  placeholder="Parent Name"/>
             </div>
                 <div class="col-md-6">
 
-         <asp:Label runat="server" Text="Email Address*" style="font-weight: 500;" />
-        <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" Width="100%" style=" margin-top:10px; margin-bottom:20px"  placeholder="Email Address"/>
+         <asp:Label runat="server" Text="Email Address*"  Font-Bold="true" Style="margin-top: 10px" />
+        <asp:TextBox ID="txtEmail" CssClass="form-control card-title" runat="server" TextMode="Email"  style=" margin-top:10px; margin-bottom:20px"  placeholder="Email Address"/>
             </div>
 
             <div class="col-md-6">
-        <asp:Label runat="server" Text="Phone Number*" style="font-weight: 500;" />
-        <asp:TextBox ID="txtPhone" runat="server" TextMode="Phone" Width="100%" style=" margin-top:10px; margin-bottom:20px"  placeholder="Phone Number"/>
+        <asp:Label runat="server" Text="Phone Number*"  Font-Bold="true" Style="margin-top: 10px" />
+        <asp:TextBox ID="txtPhone"  CssClass="form-control card-title" runat="server" TextMode="Phone" style=" margin-top:10px; margin-bottom:20px"  placeholder="Phone Number"/>
             </div>
          <div class="col-md-6">
-         <asp:Label runat="server" Text="City*" style="font-weight: 500;" />
-        <asp:TextBox ID="txtcity" runat="server" Width="100%" style=" margin-top:10px ; margin-bottom:20px"  placeholder="City"/>
-             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="This is requrie"></asp:RequiredFieldValidator>
-            </div>
-
-       <div class="col-md-6">
-    <asp:Label runat="server" Text="Select Curriculum*" style="font-weight: 500;" />
-    <asp:TextBox ID="txtselect" runat="server" TextMode="Phone" Width="100%" style=" margin-top:10px; margin-bottom:20px"  placeholder="Select Curriculum"/>
+          <asp:Label ID="Label6" runat="server" Text="Address*" Font-Bold="true" Style="margin-top: 10px"></asp:Label>
+       <asp:TextBox ID="txtcity" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Address"></asp:TextBox>
         </div>
+        
+
+  
      <div class="col-md-6">
-     <asp:Label runat="server" Text="Select Grade*" style="font-weight: 500;" />
-    <asp:TextBox ID="txtselegrade" runat="server" Width="100%" style=" margin-top:10px ; margin-bottom:20px"  placeholder="Select Grade"/>
-        </div>
+           <asp:Label ID="Label3" runat="server" Text="Class*" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
+             <asp:DropDownList ID="ddlclass" runat="server" CssClass="form-control"  Style="margin-top: 10px" ></asp:DropDownList>
+      </div>
 
-            <div class="col-md-12">
-         <asp:Label runat="server" Text="Additional Message (optional)*" style="font-weight: 500;" />
-        <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="4" Width="100%"  style=" margin-top:10px ; margin-bottom:20px" placeholder="Additional Message"/>
+            <div class="col-md-6">
+         <asp:Label runat="server" Text="Additional Message (optional)*"  Font-Bold="true" Style="margin-top: 10px"/>
+        <asp:TextBox ID="txtMessage" CssClass="form-control card-title" runat="server" TextMode="MultiLine" Rows="1"   style=" margin-top:10px ; margin-bottom:20px" placeholder="Additional Message"/>
             </div>
-        </div>
+     
 
-        <asp:Button ID="btnSubmit" runat="server" Onclientclick="return valid()" Text="Submit Enquiry"  CssClass="btn btn-success" style="font-weight: 500;" OnClick="btnSubmit_Click" />
+          <div class="col-md-5"> </div>
+          <div class="col-md-1">
+             <asp:Button ID="btnSubmit" runat="server" Onclientclick="return valid()" Text="Submit Enquiry"     CssClass="btn btn-success" Style="font-weight: 500;margin-top: 20px" OnClick="btnSubmit_Click" />
+         </div>
+             </div>
     </div>
     <br />
     <br />
@@ -72,14 +73,13 @@
                   var email = document.getElementById('<%=this.txtEmail.ClientID%>').value.trim();
                  var phone = document.getElementById('<%=this.txtPhone.ClientID%>').value.trim();
                 var city = document.getElementById('<%=this.txtcity.ClientID%>').value.trim();
-                var selectcir = document.getElementById('<%=this.txtselect.ClientID%>').value.trim();
-                var Grade = document.getElementById('<%=this.txtselegrade.ClientID%>').value.trim();
+                var Grade = document.getElementById('<%=this.ddlclass.ClientID%>').value.trim();
                 var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();
 
                 let mobilecon = /^\d{10}$/;
                 let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                if (parent === "" || email === "" || clas === "" || phone === "" || city === "" || selectcir === "" || msg === "" || Grade === "") {
+                if (parent === "" || email === "" || clas === "" || phone === "" || city === "" ||  msg === "" || Grade === "") {
                     swal("Please fill all details to proceed..!", "", "warning");
                     return false;
                 }
@@ -97,5 +97,15 @@
                 return true;
             }
         </script>
-
+    <script type="text/javascript">
+        function clearForm() {
+   <%--     document.getElementById('<%= txtaddno.ClientID %>').value = "";--%>
+        document.getElementById('<%= txtParentName.ClientID %>').value = "";
+        document.getElementById('<%= txtEmail.ClientID %>').value = "";
+        document.getElementById('<%= txtPhone.ClientID %>').value = "";
+        document.getElementById('<%= txtcity.ClientID %>').value = "";
+        document.getElementById('<%= txtMessage.ClientID %>').value = "";
+    document.getElementById('<%= ddlclass.ClientID %>').selectedIndex = 0;
+        }
+    </script>
 </asp:Content>

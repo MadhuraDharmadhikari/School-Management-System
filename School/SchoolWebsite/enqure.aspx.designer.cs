@@ -42,6 +42,15 @@ namespace School.SchoolWebsite
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
 
         /// <summary>
+        /// Label6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
+
+        /// <summary>
         /// txtcity control.
         /// </summary>
         /// <remarks>
@@ -51,13 +60,22 @@ namespace School.SchoolWebsite
         protected global::System.Web.UI.WebControls.TextBox txtcity;
 
         /// <summary>
-        /// txtclass control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtclass;
+        protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
+        /// ddlclass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlclass;
 
         /// <summary>
         /// txtMessage control.

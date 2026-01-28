@@ -7,6 +7,8 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
   <div class="row" style=" background: #f8f7f4"">
@@ -50,37 +52,75 @@
                   <div class="row">
                   
             <div class="col-md-6">
-               <asp:Label runat="server" Text="Full Name*" style="font-weight: 500;" />
-               <asp:TextBox ID="txtParentName" runat="server" Width="100%" style=" margin-top:10px"  placeholder="Full Name"/>
+               <asp:Label runat="server" Text="Full Name*" style="font-weight: 500;" Font-Bold="true" />
+               <asp:TextBox ID="txtParentName"  CssClass="form-control card-title" runat="server" style=" margin-top:10px"  placeholder="Full Name"/>
             </div>
                 <div class="col-md-6">
 
-         <asp:Label runat="server" Text="Email Address*" style="font-weight: 500;" />
-        <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" Width="100%" style=" margin-top:10px; margin-bottom:20px"  placeholder="Email Address"/>
+         <asp:Label runat="server" Text="Email Address*" style="font-weight: 500;" Font-Bold="true" />
+        <asp:TextBox ID="txtEmail" runat="server"  CssClass="form-control card-title" TextMode="Email" style=" margin-top:10px; margin-bottom:20px"  placeholder="Email Address"/>
             </div>
 
             <div class="col-md-6">
-        <asp:Label runat="server" Text="Phone Number*" style="font-weight: 500;" />
-        <asp:TextBox ID="txtPhone" runat="server" TextMode="Phone" Width="100%" style=" margin-top:10px; margin-bottom:20px"  placeholder="Phone Number"/>
+        <asp:Label runat="server" Text="Phone Number*" style="font-weight: 500;" Font-Bold="true" />
+        <asp:TextBox ID="txtPhone" runat="server"  CssClass="form-control card-title" TextMode="Phone" style=" margin-top:10px; margin-bottom:20px"  placeholder="Phone Number"/>
             </div>
          <div class="col-md-6">
-         <asp:Label runat="server" Text="Subject*" style="font-weight: 500;" />
-        <asp:TextBox ID="TextBox2" runat="server" TextMode="Email" Width="100%" style=" margin-top:10px ; margin-bottom:20px"  placeholder="Subject"/>
+         <asp:Label runat="server" Text="Subject*" style="font-weight: 500;" Font-Bold="true" />
+        <asp:TextBox ID="txtsub" runat="server"  CssClass="form-control card-title"  style=" margin-top:10px ; margin-bottom:20px"  placeholder="Subject"/>
             </div>
             <div class="col-md-12">
-         <asp:Label runat="server" Text="Additional Message (optional)*" style="font-weight: 500;" />
-        <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="4" Width="100%"  style=" margin-top:10px ; margin-bottom:20px" placeholder="Additional Message"/>
+         <asp:Label runat="server" Text="Additional Message (optional)*" style="font-weight: 500;"  Font-Bold="true" />
+        <asp:TextBox ID="txtMessage" runat="server"  CssClass="form-control card-title" TextMode="MultiLine" Rows="4"   style=" margin-top:10px ; margin-bottom:20px" placeholder="Additional Message"/>
             </div>
         </div>
 
-        <asp:Button ID="btnSubmit" runat="server" Onclientclick="return valid()" Text="Submit Enquiry" CssClass="btn btn-success" style="font-weight: 500;" />
+        <asp:Button ID="btnSubmit" runat="server"  Text="Submit Enquiry" CssClass="btn btn-success" OnClientClick="return valid();" OnClick="btnSubmit_Click" />
+
     </div>
                   </div>
-
-
               </div>
           
+     <script>
 
-     <!--Contact_us-->
+         function valid() {
+             var parent = document.getElementById('<%=this.txtParentName.ClientID %>').value.trim();
+             var email = document.getElementById('<%=this.txtEmail.ClientID%>').value.trim();
+             var phone = document.getElementById('<%=this.txtPhone.ClientID%>').value.trim();
+             var city = document.getElementById('<%=this.txtsub.ClientID%>').value.trim();
+             var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();
+
+             let mobilecon = /^\d{10}$/;
+             let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+             if (parent === "" || email === "" || phone === "" || city === "" || msg === "") {
+                 swal("Please fill all details to proceed..!", "", "warning");
+                 return false;
+             }
+
+             if (!mobilecon.test(phone)) {
+                 swal("Please enter a valid 10-digit contact number.", "", "warning");
+                 return false;
+             }
+
+             if (!emailcon.test(email)) {
+                 swal("Please enter a valid Email ID.", "", "warning");
+                 return false;
+             }
+
+             return true;
+         }
+     </script>
+ <script type="text/javascript">
+     function clearForm() {
+<%--     document.getElementById('<%= txtaddno.ClientID %>').value = "";--%>
+         document.getElementById('<%= txtParentName.ClientID %>').value = "";
+         document.getElementById('<%= txtEmail.ClientID %>').value = "";
+         document.getElementById('<%= txtPhone.ClientID %>').value = "";
+         document.getElementById('<%= txtsub.ClientID %>').value = "";
+         document.getElementById('<%= txtMessage.ClientID %>').value = "";
+      
+     }
+ </script>
       
 </asp:Content>
