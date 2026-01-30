@@ -140,22 +140,6 @@
         <br />
 
 
-        <%--        <div class="slider-wrapper">
-          
-            <ul class="slider-track" id="sliderTrack">
-                <li>
-                    <img src="image/11.jpg" alt="STEM Exploration"><span>STEM Exploration</span></li>
-                <li>
-                    <img src="image/12.jpg" alt="Robotics"><span>Robotics</span></li>
-                <li>
-                    <img src="image/13.jpg" alt="Creative Skills"><span>Creative Skills</span></li>
-                <li>
-                    <img src="image/14.jpg" alt="Sports Excellence"><span>Sports Excellence</span></li>
-                <li>
-                    <img src="image/20.jpg" alt="Leadership"><span>Leadership</span></li>"background: #fff4f2;"
-            </ul>
-        </div>--%>
-
 
         <div class="col-12 col-md-6 col-lg-4">
         </div>
@@ -172,7 +156,7 @@
                     <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                         <i class="fas fa-chalkboard-teacher" style="font-size:40px;color:#2c7be5;"></i>
                         <h4> <a  href="classroom.aspx"
-                            style="text-decoration: none;  cursor: pointer;">Smart Classrooms</a></h4>
+                            style="text-decoration: none;  cursor: pointer;">Smart<br /> Classrooms</a></h4>
                         <p>Interactive teaching with digital boards & modern learning tools</p>
                     </div>
                 </div>
@@ -199,69 +183,13 @@
                 <div class="col-md mb-4">
                     <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
                     <i class="fas fa-futbol" style="font-size:40px;color:#e83e8c;"></i>
-                        <h4><a  href="playground.aspx"
-                            style="text-decoration: none;  cursor: pointer;">Spacious Playground</a></h4>
-                        <p>Safe, well-maintained grounds for sports & physical development</p>
+                        <h4><a  href="playground.aspx" style="text-decoration: none;  cursor: pointer;">Spacious Playground</a></h4>
+                        <p>Well-maintained grounds for sports & physical development</p>
                     </div>
                 </div>
 
             </div>
         </div>
-
-        <!-- PROGRAMMES -->
-      <%--  <div class="container-fluid"
-            style="padding: 70px 80px; text-align: center;">
-
-            <h2 style="color: #d11f1f; font-size: 36px; margin-bottom: 20px;">Our Academic Programmes
-            </h2>
-
-            <div class="row justify-content-center" style="margin-top: 40px;">
-
-                <div class="col-md mb-4">
-                    <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                        <i class="fas fa-child"
-                            style="font-size: 40px; color: #ff9f1c; margin-bottom: 15px;"></i>
-                        <h5>Pre-Primary</h5>
-                    </div>
-                </div>
-
-                <div class="col-md mb-4">
-                    <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                        <i class="fas fa-book-open"
-                            style="font-size: 40px; color: #2f80ed; margin-bottom: 15px;"></i>
-                        <h5>Primary</h5>
-                    </div>
-                </div>
-
-                <div class="col-md mb-4">
-                    <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                        <i class="fas fa-flask"
-                            style="font-size: 40px; color: #2ecc71; margin-bottom: 15px;"></i>
-                        <h5>Modern labs</h5>
-                    </div>
-                </div>
-
-                <div class="col-md mb-4">
-                    <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                        <i class="fas fa-school-flag"
-                            style="font-size: 40px; color: #e74c3c; margin-bottom: 15px;"></i>
-                        <h5>Secondary</h5>
-                    </div>
-                </div>
-
-                <div class="col-md mb-4">
-                    <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                        <i class="fas fa-user-graduate"
-                            style="font-size: 40px; color: #c89b2c; margin-bottom: 15px;"></i>
-                        <h5>Pre-University</h5>
-                    </div>
-                </div>
-
-            </div>
-        </div>--%>
-
-
-
 
         <!-- STATS -->
         <div class="container-fluid"
