@@ -110,6 +110,7 @@
     <Content Include="admin\images\logo-text.png" />
     <Content Include="admin\images\logo.png" />
     <Content Include="admin\images\logo.svg" />
+    <Content Include="admin\images\principle.png" />
     <Content Include="admin\images\product\1.jpg" />
     <Content Include="admin\images\product\2.jpg" />
     <Content Include="admin\images\product\3.jpg" />
@@ -3604,6 +3605,7 @@
     <Content Include="SchoolWebsite\contact.aspx" />
     <Content Include="SchoolWebsite\enqure.aspx" />
     <Content Include="SchoolWebsite\facility.aspx" />
+    <Content Include="SchoolWebsite\faculties.aspx" />
     <Content Include="SchoolWebsite\feedback.aspx" />
     <Content Include="SchoolWebsite\home.aspx" />
     <Content Include="SchoolWebsite\laboratories.aspx" />
@@ -3794,6 +3796,13 @@
     </Compile>
     <Compile Include="SchoolWebsite\facility.aspx.designer.cs">
       <DependentUpon>facility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolWebsite\faculties.aspx.cs">
+      <DependentUpon>faculties.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SchoolWebsite\faculties.aspx.designer.cs">
+      <DependentUpon>faculties.aspx</DependentUpon>
     </Compile>
     <Compile Include="SchoolWebsite\feedback.aspx.cs">
       <DependentUpon>feedback.aspx</DependentUpon>

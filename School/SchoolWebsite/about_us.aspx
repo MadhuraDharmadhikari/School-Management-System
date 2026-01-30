@@ -46,13 +46,35 @@
     </div>
 
     <div class="row">
+       
         <div class="col-md-1">
         </div>
         <div class="col-md-5">
+            <h1 style="color: #e1261c; font-size: 42px; font-weight: 700; margin-bottom: 25px; font-family: Arial, Helvetica, sans-serif; padding-top: 30px">Director-Principal's Message</h1>
+            <p style="font-size: 18px; line-height: 1.8; color: #1f2a44; max-width: 1100px; font-family: Arial, Helvetica, sans-serif;">
+               Dear Students and Well-Wishers, Our vision extends far beyond academic scores.
+                We are committed to building a distinctive educational culture where every child learns with joy, 
+                thinks with depth, grows with strong character and develops into a responsible and compassionate citizen 
+                of the world. We believe that meaningful education must nurture curiosity, creativity, exploration and a lifelong love for 
+                learning. Our schools provide happy, safe and inspiring environments where learners are encouraged to question, discover, experiment and express their ideas with confidence.<br />Warm regards,<br />
+Mrs. Sasmita Mohanty<br />
+Director-Principal  </p>
+        </div>
+
+        <div class="col-md-5">
+            <img src="../admin/images/principle.png"
+                style="width: 100%; max-width: 500px; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+        </div>
+           <div class="col-md-1">
+   </div>
+
+        <div class="col-md-1 mt-5">
+        </div>
+        <div class="col-md-5 mt-5">
             <img src="image/Vision.jpg"
                 style="width: 100%; max-width: 500px; border-radius: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 mt-5">
             <h1 style="color: #e1261c; font-size: 42px; font-weight: 700; margin-bottom: 25px; font-family: Arial, Helvetica, sans-serif; padding-top: 30px">Vision</h1>
             <p style="font-size: 18px; line-height: 1.8; color: #1f2a44; max-width: 1100px; font-family: Arial, Helvetica, sans-serif;">
                        Sanjay Ghodawat International School envisions becoming a premier institution recognised for excellence in education and holistic development.
@@ -60,7 +82,7 @@
                        Our goal is to shape adaptable, responsible and forward-thinking individuals who make meaningful contributions to society.
             </p>
         </div>
-        <div class="col-md-1">
+        <div class="col-md-1 mt-5">
         </div>
         <div class="col-md-1">
         </div>
