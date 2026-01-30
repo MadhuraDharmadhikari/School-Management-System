@@ -159,26 +159,35 @@ namespace School.admin
             LoadGrid();
         }
 
-        void LoadGrid()
-        {
-            SqlDataAdapter da = new SqlDataAdapter(
-                @"SELECT cs.ClassSectionID,
-                 c.ClassName,
-                 s.SectionName,
-                 cs.AcademicYear,
-                 at.TeacherName
-          FROM ClassSectionMaster cs
-          INNER JOIN ClassMaster c ON cs.ClassID = c.ClassID
-          INNER JOIN SectionMaster s ON cs.SectionID = s.SectionID
-          LEFT JOIN add_teacher at ON cs.ClassTeacherID = at.TeacherID
-          WHERE cs.Status = 1", con);
+       void LoadGrid(string search = "")
+{
+    SqlCommand cmd = new SqlCommand(@"
+        SELECT cs.ClassSectionID,
+               c.ClassName,
+               s.SectionName,
+               cs.AcademicYear,
+               at.TeacherName
+        FROM ClassSectionMaster cs
+        INNER JOIN ClassMaster c ON cs.ClassID = c.ClassID
+        INNER JOIN SectionMaster s ON cs.SectionID = s.SectionID
+        LEFT JOIN add_teacher at ON cs.ClassTeacherID = at.TeacherID
+        WHERE cs.Status = 1
+          AND (
+                c.ClassName LIKE '%' + @search + '%'
+             OR s.SectionName LIKE '%' + @search + '%'
+             OR at.TeacherName LIKE '%' + @search + '%'
+             OR cs.AcademicYear LIKE '%' + @search + '%'
+          )", con);
 
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+    cmd.Parameters.AddWithValue("@search", search);
 
-            gvClassSection.DataSource = dt;
-            gvClassSection.DataBind();
-        }
+    SqlDataAdapter da = new SqlDataAdapter(cmd);
+    DataTable dt = new DataTable();
+    da.Fill(dt);
+
+    gvClassSection.DataSource = dt;
+    gvClassSection.DataBind();
+}
         protected void btnCloseModal_Click(object sender, EventArgs e)
         {
             ScriptManager.RegisterStartupScript(
