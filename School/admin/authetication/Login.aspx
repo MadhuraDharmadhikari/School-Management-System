@@ -28,7 +28,7 @@
                         <div class="row no-gutters">
                             <div class="col-xl-12">
                                 <div class="auth-form">
-                                    <h4 class="text-center mb-4">Login your account</h4>
+                                    <h4 class="text-center mb-4">Login</h4>
                                     <form runat="server">
                                         <div class="form-group">
                                             <asp:Label ID="lblEmail" runat="server" Text="Email" AssociatedControlID="txtEmail" Font-Bold="True"></asp:Label>
@@ -40,23 +40,23 @@
 
                                         </div>
                                         <div class="form-row d-flex justify-content-between mt-4 mb-2">
-                                            <div class="form-group">
+                                      <%--      <div class="form-group">
                                                 <div class="form-check ml-2">
                                                     <input class="form-check-input" type="checkbox" id="basic_checkbox_1" />
                                                     <label class="form-check-label" for="basic_checkbox_1">Remember me</label>
                                                 </div>
-                                            </div>
+                                            </div>--%>
                                             <div class="form-group">
-                                                <a href="page-forgot-password.html">Forgot Password?</a>
+                                                <a href="forgetpassword.aspx">Forgot Password?</a>
                                             </div>
                                         </div>
                                         <div class="text-center">
-                                            <asp:Button ID="btnSignIn" runat="server" Text="Sign me in" CssClass="btn btn-primary btn-block" OnClick="btnSignIn_Click" />
+                                            <asp:Button ID="btnSignIn" runat="server" Text="Login" CssClass="btn btn-primary btn-block" OnClick="btnSignIn_Click" />
                                         </div>
                                     </form>
-                                    <div class="new-account mt-3">
+                                 <%--   <div class="new-account mt-3">
                                         <p>Don't have an account? <a class="text-primary" href="./page-register.html">Sign up</a></p>
-                                    </div>
+                                    </div>--%>
                                 </div>
                             </div>
                         </div>

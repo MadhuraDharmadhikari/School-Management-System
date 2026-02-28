@@ -67,12 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin\authetication\error401.aspx" />
-    <Content Include="admin\authetication\error403.aspx" />
-    <Content Include="admin\authetication\error404.aspx" />
-    <Content Include="admin\authetication\error500.aspx" />
+    <Content Include="admin\authetication\changepassword.aspx" />
+    <Content Include="admin\authetication\forgetpassword.aspx" />
     <Content Include="admin\authetication\Login.aspx" />
-    <Content Include="admin\authetication\Register.aspx" />
     <Content Include="admin\A_classes.aspx" />
     <Content Include="admin\A_subject.aspx" />
     <Content Include="admin\A_timetable.aspx" />
@@ -3614,33 +3611,19 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin\authetication\error401.aspx.cs">
-      <DependentUpon>error401.aspx</DependentUpon>
+    <Compile Include="admin\authetication\changepassword.aspx.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\authetication\error401.aspx.designer.cs">
-      <DependentUpon>error401.aspx</DependentUpon>
+    <Compile Include="admin\authetication\changepassword.aspx.designer.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\authetication\error403.aspx.cs">
-      <DependentUpon>error403.aspx</DependentUpon>
+    <Compile Include="admin\authetication\forgetpassword.aspx.cs">
+      <DependentUpon>forgetpassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\authetication\error403.aspx.designer.cs">
-      <DependentUpon>error403.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\authetication\error404.aspx.cs">
-      <DependentUpon>error404.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\authetication\error404.aspx.designer.cs">
-      <DependentUpon>error404.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\authetication\error500.aspx.cs">
-      <DependentUpon>error500.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\authetication\error500.aspx.designer.cs">
-      <DependentUpon>error500.aspx</DependentUpon>
+    <Compile Include="admin\authetication\forgetpassword.aspx.designer.cs">
+      <DependentUpon>forgetpassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\authetication\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -3648,13 +3631,6 @@
     </Compile>
     <Compile Include="admin\authetication\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\authetication\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\authetication\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\A_classes.aspx.cs">
       <DependentUpon>A_classes.aspx</DependentUpon>
