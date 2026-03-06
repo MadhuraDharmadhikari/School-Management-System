@@ -67,14 +67,14 @@
         <asp:TemplateField HeaderText="Action">
             <ItemTemplate>
                 <asp:LinkButton ID="btnEdit" runat="server"
-                    CssClass="btn btn-sm btn-primary"
+                    CssClass="btn btn-sm btn-primary mb-2"
                     CommandName="EditStudent"
                     CommandArgument='<%# Eval("StudentID") %>'>
                     Edit
                 </asp:LinkButton>
 
                 <asp:LinkButton ID="btnDelete" runat="server"
-                    CssClass="btn btn-sm btn-danger ms-1"
+                    CssClass="btn btn-sm btn-danger "
                     CommandName="Delete"
                     CommandArgument='<%# Eval("StudentID") %>'
                     OnClientClick="return confirm('Are you sure?');">

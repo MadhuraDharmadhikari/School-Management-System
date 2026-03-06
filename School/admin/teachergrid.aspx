@@ -73,7 +73,7 @@
                                 <ItemTemplate>
                                     <asp:LinkButton ID="btnEdit"
                                         runat="server"
-                                        CssClass="btn btn-sm btn-primary"
+                                        CssClass="btn btn-sm btn-primary mb-2"
                                         CommandName="EditTeacher"
                                         CommandArgument='<%# Eval("TeacherID") %>'>
                                             Edit
@@ -81,7 +81,7 @@
 
                                     <asp:LinkButton ID="btnDelete"
                                         runat="server"
-                                        CssClass="btn btn-sm btn-danger ms-2"
+                                        CssClass="btn btn-sm btn-danger "
                                         CommandName="Delete"
                                         CommandArgument='<%# Eval("TeacherID") %>'
                                         OnClientClick="return confirm('Are you sure?');">

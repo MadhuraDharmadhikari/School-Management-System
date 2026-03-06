@@ -15,7 +15,7 @@
                             <div class="card-top">
                                 <i class="fas fa-user-graduate fa-3x" style="color: #2f9e44;"></i>
                                 <br />
-                                <span class="card-title" style="color: #064305; align-items: center; font-size: 28px">Total Students</span>
+                                <span class="card-title" style="color: #064305; align-items: center; font-size: 26px">Total Students</span>
                             </div>
 
                             <div class="card-value text-green">

@@ -66,27 +66,27 @@
                                 </div>
 
                                 <ul class="navbar-nav header-right">
-                                    <li class="nav-item dropdown notification_dropdown">
+                                  <%--  <li class="nav-item dropdown notification_dropdown">
                                         <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                                             <i class="mdi mdi-bell"></i>
                                         </a>
-                                    </li>
+                                    </li>--%>
                                     <li class="nav-item dropdown header-profile">
                                         <a class="nav-link" href="#" role="button" data-toggle="dropdown">
-                                            <i class="mdi mdi-account"></i>
+                                          <i class="mdi mdi-settings"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right">
-                                            <a href="#" class="dropdown-item">
-                                                <i class="icon-user"></i>
-                                                <span class="ml-2">Madhura</span>
+                                            <a href="adminprof.aspx" class="dropdown-item">
+                                              <i class="mdi mdi-account-circle"></i>
+                                                <span class="ml-2">My Profile</span>
                                             </a>
-                                            <a href="./email-inbox.html" class="dropdown-item">
-                                                <i class="icon-envelope-open"></i>
-                                                <span class="ml-2">mdhura@gmail.com</span>
+                                            <a href="authetication/forgetpassword.aspx" class="dropdown-item">
+                                                 <i class="mdi mdi-lock-reset"></i>
+                                                <span class="ml-2">Change Password</span>
                                             </a>
                                             <a href="authetication/Login.aspx" class="dropdown-item">
                                                 <i class="icon-key"></i>
-                                                <span class="ml-2">Logout </span>
+                                                <span class="ml-2">Logout</span>
                                             </a>
                                             <a href="../SchoolWebsite/home.aspx" class="dropdown-item">
                                                 <i class="fas fa-home me-1 icon-home"></i>
@@ -139,9 +139,9 @@
                             <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
                                 <i class="fas fa-envelope-open-text"></i><span class="nav-text">INQUIRIES</span></a>
                                 <ul aria-expanded="false">
-                                    <li><a href="contactgrid.aspx"><i class="fas fa-address-book"></i>Contact Messages List</a></li>
-                                    <li><a href="fastenquregrid.aspx"><i class="fa fa-bolt"></i>Fast Enquiries List</a></li>
-                                    <li><a href="enqurgrid.aspx"><i class="fa fa-comments"></i>Enquiries List</a></li>
+                                    <li><a href="contactgrid.aspx"><i class="fas fa-address-book"></i>Contact Us List</a></li>
+                                    <li><a href="fastenquregrid.aspx"><i class="fa fa-bolt"></i>Fast Enquiry List</a></li>
+                                    <li><a href="enqurgrid.aspx"><i class="fa fa-comments"></i>Enquiry List</a></li>
                                     <li><a href="feedbackgrid.aspx"><i class="fa fa-comment-dots"></i>Feedback List</a></li>
                                 </ul>
                             </li>
@@ -164,8 +164,8 @@
 
                 <div class="footer">
                     <div class="copyright">
-                        <p>Copyright © Designed &amp; Developed by <a href="#" target="_blank">Quixkit</a> 2019</p>
-                        <p>Distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a></p>
+                        <p>Copyright © Designed &amp; Developed by Dharmadhikari software</p>
+                   <%--     <p>Distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a></p>--%>
                     </div>
                 </div>
 

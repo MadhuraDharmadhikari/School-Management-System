@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\adminprof.aspx" />
     <Content Include="admin\authetication\changepassword.aspx" />
     <Content Include="admin\authetication\forgetpassword.aspx" />
     <Content Include="admin\authetication\Login.aspx" />
@@ -3611,6 +3612,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\adminprof.aspx.cs">
+      <DependentUpon>adminprof.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminprof.aspx.designer.cs">
+      <DependentUpon>adminprof.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\authetication\changepassword.aspx.cs">
       <DependentUpon>changepassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

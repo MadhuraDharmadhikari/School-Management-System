@@ -15,9 +15,10 @@
 </head>
 
 <body class="h-100">
-
     <a href="~/SchoolWebsite/home.aspx" runat="server" id="admin"
-        style="position: fixed; bottom: 20px; right: 20px; background-color: #093cc7; color: Black; padding: 10px 16px; border-radius: 6px; text-decoration: none; z-index: 1000; font-weight: bold;">Go TO Home
+        style="position: fixed; bottom: 20px; right: 20px; background-color: #093cc7; color: Black; padding: 10px 16px; border-radius: 6px; text-decoration: none; z-index: 1000; font-weight: bold;">
+        
+        <i class="fas fa-home me-1 icon-home"></i>Go to home page
     </a>
     <!-- Navbar -->
     <div class="authincation h-100">
