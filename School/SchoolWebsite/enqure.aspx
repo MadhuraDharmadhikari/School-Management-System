@@ -22,7 +22,7 @@
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2)";"">
       
-        <h2 style="color: rgb(22, 22, 87);font-size: 3rem;">Get A Quick Enquiry Form</h2><br />
+        <h2 style="color: rgb(22, 22, 87);font-size: 3rem;">Enquiry Form</h2><br />
 
              <div class="row">
          <div class="col-md-6">
@@ -47,8 +47,8 @@
 
   
   <div class="col-md-6">
-        <asp:Label ID="Label3" runat="server" Text="Class*" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
-          <asp:DropDownList ID="ddlclass" runat="server" CssClass="form-control"  Style="margin-top: 10px" ></asp:DropDownList>
+        <asp:Label ID="Label3" runat="server" Text="Subject*" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
+          <asp:TextBox ID="ddlclas" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Address"></asp:TextBox>
    </div>
 
          <div class="col-md-6">
@@ -73,7 +73,7 @@
              var email = document.getElementById('<%=this.txtEmail.ClientID%>').value.trim();
              var phone = document.getElementById('<%=this.txtPhone.ClientID%>').value.trim();
              var city = document.getElementById('<%=this.txtcity.ClientID%>').value.trim();
-             var Grade = document.getElementById('<%=this.ddlclass.ClientID%>').value.trim();
+             var Grade = document.getElementById('<%=this.ddlclas.ClientID%>').value.trim();
              var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();
 
              let mobilecon = /^\d{10}$/;
@@ -105,7 +105,7 @@
          document.getElementById('<%= txtPhone.ClientID %>').value = "";
          document.getElementById('<%= txtcity.ClientID %>').value = "";
          document.getElementById('<%= txtMessage.ClientID %>').value = "";
-         document.getElementById('<%= ddlclass.ClientID %>').selectedIndex = 0;
+         document.getElementById('<%= ddlclas.ClientID %>').selectedIndex = 0;
      }
  </script>
     </asp:Content>

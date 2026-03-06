@@ -22,7 +22,7 @@
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.2)";"">
       
-           <h2 style="color: rgb(22, 22, 87);font-size: 3rem;">Admission Enquiry Form</h2><br />
+           <h2 style="color: rgb(22, 22, 87);font-size: 3rem;">Admission  Form</h2><br />
 
         <div class="row">
             <div class="col-md-6">

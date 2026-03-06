@@ -34,7 +34,7 @@
           <div style="display:flex; align-items:center; gap:5px;">
             <h5 style="color: rgb(22, 22, 87); font-size: 20px; font-weight: 700; margin-left:5px; font-family: Arial, Helvetica, sans-serif;">Submit a quick enquiry and we’ll respond soon.</h5>  
             <a runat="server" href="enqure.aspx" id="A1"> 
-           <button type="button" onclick="openPopup()"style="background-color:#e1261c;border-color: #e1261c; color: #e6e6e0; font-size: 1rem; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Get Quick Enquiry</button>
+           <button type="button" onclick="openPopup()"style="background-color:#e1261c;border-color: #e1261c; color: #e6e6e0; font-size: 1rem; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Enquiry Form</button>
             </a>
            </div>
         </div>

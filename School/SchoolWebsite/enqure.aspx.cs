@@ -18,7 +18,7 @@ namespace School.SchoolWebsite
         {
             if (!IsPostBack)
             {
-                BindClass();
+               
                 if (Session["AdmissionSuccess"] != null)
                 {
                     ScriptManager.RegisterStartupScript(
@@ -38,22 +38,6 @@ namespace School.SchoolWebsite
             }
         }
 
-        private void BindClass()
-        {
-            SqlCommand cmd = new SqlCommand("SELECT ClassID, ClassName FROM ClassMaster", con);
-
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            ddlclass.DataSource = dt;
-            ddlclass.DataTextField = "ClassName";
-            ddlclass.DataValueField = "ClassID"; // or GenderID
-            ddlclass.DataBind();
-
-            ddlclass.Items.Insert(0, new ListItem("-- Select Class --", "0"));
-
-        }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -68,7 +52,7 @@ ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
                 cmd.Parameters.AddWithValue("@EmailAddress", txtEmail.Text.Trim());
                 cmd.Parameters.AddWithValue("@PhoneNumber", txtPhone.Text.Trim());
                 cmd.Parameters.AddWithValue("@Address", txtcity.Text.Trim());
-                cmd.Parameters.AddWithValue("@Class", ddlclass.SelectedItem.Text);
+                cmd.Parameters.AddWithValue("@Class", ddlclas.Text.Trim());
                 cmd.Parameters.AddWithValue("@AdditionalMessage", txtMessage.Text.Trim());
 
                 con.Open();
@@ -99,7 +83,7 @@ ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             txtEmail.Text = "";
             txtPhone.Text = "";
             txtcity.Text = "";
-            ddlclass.SelectedIndex = 0;
+            ddlclas.Text = "";
             txtMessage.Text = "";
         }
     }
