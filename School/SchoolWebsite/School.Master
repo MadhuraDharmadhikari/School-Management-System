@@ -108,8 +108,8 @@
 <!-- Navbar -->
 <div "container">
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(111, 20, 20);">
-
-        <img src="image/logo.jpg" class="img-fluid" style="height: 5rem; width: 5rem;" alt="">
+        <a href="home.aspx">
+        <img src="image/logo.jpg" class="img-fluid" style="height: 5rem; width: 5rem;" alt=""></a>
         <h2 style="padding-left:1rem; padding-right:5rem; font-family:'Playfair Display', serif; color:#fff; font-weight:700;">
             SGIS
         </h2>
@@ -207,13 +207,13 @@
                <p style="color: antiquewhite; padding-left: 2rem;">Sanjay Ghodawat International School
                Khasbag, Vadagoan, Belagavi, Karnataka 590005</p>--%>
                <h4 style="color: rgb(72, 119, 173); padding-left: 2rem; margin-top:40px">Our Location</h4>
-               <h5 style="color: antiquewhite; padding-left: 2rem;">Campus : Gat No. 555 Kolhapur - Sangli Highway A / P : Atigre Taluka : Hatkanangale Dist : Kolhapur ZIP / PIN Code : 416 118 State : Maharashtra, INDIA</h5>
+               <h5 style="color: antiquewhite; padding-left: 2rem;font-size:16px">Campus : Gat No. 555 Kolhapur - Sangli Highway A / P : Atigre Taluka : Hatkanangale Dist : Kolhapur ZIP / PIN Code : 416 118 State : Maharashtra, INDIA</h5>
                <h4 style="color: rgb(72, 119, 173); padding-left: 2rem;">Phone </h4>
-                <h5 style="color: antiquewhite; padding-left: 2rem;">Cell No. : +91 77200 12058</h5>
-                <h5 style="color: antiquewhite; padding-left: 2rem;">Land Line No. : +91 230 - 2689700</h5>
-                <h5 style="color: antiquewhite; padding-left: 2rem;">Fax No. : +91 231 - 2600999</h5>
+                <h5 style="color: antiquewhite; padding-left: 2rem;font-size:16px">Cell No. : +91 77200 12058</h5>
+                <h5 style="color: antiquewhite; padding-left: 2rem;font-size:16px">Land Line No. : +91 230 - 2689700</h5>
+                <h5 style="color: antiquewhite; padding-left: 2rem;font-size:16px">Fax No. : +91 231 - 2600999</h5>
                 <h4 style="color: rgb(72, 119, 173); padding-left: 2rem;">Email Us</h4>
-             <h6 style="color: antiquewhite; padding-left: 2rem;margin-bottom:40px">principal@sgischool.in</h6>
+             <h6 style="color: antiquewhite; padding-left: 2rem;margin-bottom:40px;font-size:16px">sgischool@gmail.com</h6>
                 </div>
                 <div class="col-sm-6">
     
