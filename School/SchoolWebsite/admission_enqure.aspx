@@ -44,14 +44,25 @@
        <asp:TextBox ID="txtcity" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Address"></asp:TextBox>
         </div>
         
-
+              <div class="col-md-6">
+      <asp:Label ID="Label7" runat="server" Text="Student Name" Font-Bold="true" Style="margin-top: 10px"></asp:Label>
+      <asp:TextBox ID="txtstnm" CssClass="form-control" runat="server" Text="" Style="margin-top: 10px" placeholder="Student Name"></asp:TextBox>
+  </div>
+  <div class="col-md-6">
+      <asp:Label ID="Label1" runat="server" Text="Date of Birth" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
+      <asp:TextBox ID="txtdbt" CssClass="form-control" runat="server" Text="" Style="margin-top: 10px" TextMode="Date"></asp:TextBox>
+  </div>
+  <div class="col-md-6">
+      <asp:Label ID="Label2" runat="server" Text="Gender" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
+      <asp:DropDownList ID="ddlGender" runat="server" CssClass="form-control"  Style="margin-top: 10px"></asp:DropDownList>
+  </div>
   
      <div class="col-md-6">
            <asp:Label ID="Label3" runat="server" Text="Class*" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
              <asp:DropDownList ID="ddlclass" runat="server" CssClass="form-control"  Style="margin-top: 10px" ></asp:DropDownList>
       </div>
 
-            <div class="col-md-6">
+            <div class="col-md-12">
          <asp:Label runat="server" Text="Additional Message (optional)*"  Font-Bold="true" Style="margin-top: 10px"/>
         <asp:TextBox ID="txtMessage" CssClass="form-control card-title" runat="server" TextMode="MultiLine" Rows="1"   style=" margin-top:10px ; margin-bottom:20px" placeholder="Additional Message"/>
             </div>
@@ -73,13 +84,16 @@
                   var email = document.getElementById('<%=this.txtEmail.ClientID%>').value.trim();
                  var phone = document.getElementById('<%=this.txtPhone.ClientID%>').value.trim();
                 var city = document.getElementById('<%=this.txtcity.ClientID%>').value.trim();
+                var sname = document.getElementById('<%=this.txtstnm.ClientID%>').value.trim();
+                var sdbt = document.getElementById('<%=this.txtdbt.ClientID%>').value.trim();
                 var Grade = document.getElementById('<%=this.ddlclass.ClientID%>').value.trim();
+                var Gender = document.getElementById('<%=this.ddlGender.ClientID%>').value.trim();
                 var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();
 
                 let mobilecon = /^\d{10}$/;
                 let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                if (parent === "" || email === "" || clas === "" || phone === "" || city === "" ||  msg === "" || Grade === "") {
+                if (parent === "" || email === "" || clas === "" || phone === "" || city === "" || msg === "" || Grade === "" || sname === "" || sdbt === "" || Gender === "") {
                     swal("Please fill all details to proceed..!", "", "warning");
                     return false;
                 }
@@ -105,7 +119,10 @@
         document.getElementById('<%= txtPhone.ClientID %>').value = "";
         document.getElementById('<%= txtcity.ClientID %>').value = "";
         document.getElementById('<%= txtMessage.ClientID %>').value = "";
+        document.getElementById('<%= txtstnm.ClientID %>').value = "";
+        document.getElementById('<%= txtdbt.ClientID %>').value = "";
     document.getElementById('<%= ddlclass.ClientID %>').selectedIndex = 0;
+    document.getElementById('<%= ddlGender.ClientID %>').selectedIndex = 0;
         }
     </script>
 </asp:Content>

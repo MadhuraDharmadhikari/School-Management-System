@@ -53,7 +53,23 @@ namespace School.SchoolWebsite
             ddlclass.DataBind();
 
             ddlclass.Items.Insert(0, new ListItem("-- Select Class --", "0"));
+            BindGender();
+        }
+        private void BindGender()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT GenderID, GenderName FROM GenderMaster", con);
 
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            ddlGender.DataSource = dt;
+            ddlGender.DataTextField = "GenderName";
+            ddlGender.DataValueField = "GenderName"; // or GenderID
+            ddlGender.DataBind();
+
+            ddlGender.Items.Insert(0, new ListItem("-- Select Gender --", ""));
+         
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -62,13 +78,16 @@ namespace School.SchoolWebsite
 ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             {
                 SqlCommand cmd = new SqlCommand(
-                    "INSERT INTO AdmissionEnquiry (ParentName, EmailAddress, PhoneNumber, Address, Class, AdditionalMessage) " +
-                    "VALUES (@ParentName, @EmailAddress, @PhoneNumber, @Address, @Class, @AdditionalMessage)", con);
+                    "INSERT INTO AdmissionEnquiry (ParentName, EmailAddress, PhoneNumber, Address, Class, AdditionalMessage,DOB,Sname,Sgender) " +
+                    "VALUES (@ParentName, @EmailAddress, @PhoneNumber, @Address, @Class, @AdditionalMessage,@DOB,@Sname,@Sgender)", con);
 
                 cmd.Parameters.AddWithValue("@ParentName", txtParentName.Text.Trim());
                 cmd.Parameters.AddWithValue("@EmailAddress", txtEmail.Text.Trim());
                 cmd.Parameters.AddWithValue("@PhoneNumber", txtPhone.Text.Trim());
                 cmd.Parameters.AddWithValue("@Address", txtcity.Text.Trim());
+                cmd.Parameters.AddWithValue("@DOB", txtdbt.Text.Trim());
+                cmd.Parameters.AddWithValue("@Sname", txtcity.Text.Trim());
+                cmd.Parameters.AddWithValue("@Sgender", ddlGender.SelectedItem.Text);
                 cmd.Parameters.AddWithValue("@Class", ddlclass.SelectedItem.Text);
                 cmd.Parameters.AddWithValue("@AdditionalMessage", txtMessage.Text.Trim());
 
@@ -101,6 +120,9 @@ ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             txtPhone.Text = "";
             txtcity.Text = "";
             ddlclass.SelectedIndex = 0;
+            ddlGender.SelectedIndex = 0;
+            txtdbt.Text = "";
+            txtstnm.Text = "";
             txtMessage.Text = "";
         }
     }
