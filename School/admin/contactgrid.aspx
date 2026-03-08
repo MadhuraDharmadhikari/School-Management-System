@@ -33,18 +33,31 @@
                         DataKeyNames="ContactId"
                         AllowPaging="True"
                         PageSize="10"
+                        OnRowCommand="gvStudents_RowCommand"
                         OnPageIndexChanging="gvStudents_PageIndexChanging">
 
                         <Columns>
 
                             <asp:BoundField DataField="FullName" HeaderText="Full Name" />
                             <asp:BoundField DataField="EmailAddress" HeaderText="Email Address" />
-                                <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" />
+                            <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" />
                             <asp:BoundField DataField="Subject" HeaderText="Subject" />
                             <asp:BoundField DataField="AdditionalMessage" HeaderText="Additional Message" />
-                        
-               
+
+                            <asp:TemplateField HeaderText="Action">
+                                <ItemTemplate>
+
+                                    <asp:Button ID="btnContact" runat="server"
+                                        CssClass="btn btn-primary btn-sm"
+                                        Text='<%# Convert.ToBoolean(Eval("IsContacted")) ? "Contacted" : "Contact" %>'
+                                        CommandName="Contact"
+                                        CommandArgument='<%# Eval("ContactId") %>'
+                                        Enabled='<%# !Convert.ToBoolean(Eval("IsContacted")) %>' />
+
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
+
                     </asp:GridView>
                 </div>
             </div>

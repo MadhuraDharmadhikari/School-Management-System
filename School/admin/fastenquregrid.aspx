@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Site1.Master" AutoEventWireup="true" CodeBehind="fastenquregrid.aspx.cs" Inherits="School.admin.fastenquregrid" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">   
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-body">
         <!-- row -->
         <!-- Search Filters -->
@@ -32,18 +33,30 @@
                         DataKeyNames="EnquiryId"
                         AllowPaging="True"
                         PageSize="10"
+                         OnRowCommand="gvStudents_RowCommand"
                         OnPageIndexChanging="gvStudents_PageIndexChanging">
 
                         <Columns>
 
                             <asp:BoundField DataField="ParentName" HeaderText="Parent Name" />
                             <asp:BoundField DataField="EmailAddress" HeaderText="Email Address" />
-                          <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" />
+                            <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" />
                             <asp:BoundField DataField="Address" HeaderText="Address" />
                             <asp:BoundField DataField="Class" HeaderText="Class" />
                             <asp:BoundField DataField="AdditionalMessage" HeaderText="Additional Message" />
-                        
-               
+                            <asp:TemplateField HeaderText="Action">
+                                <ItemTemplate>
+
+                                    <asp:Button ID="btnContact" runat="server"
+                                        CssClass="btn btn-primary btn-sm"
+                                        Text='<%# Convert.ToBoolean(Eval("IsReplay")) ? "Replayed" : "Replay" %>'
+                                        CommandName="Replay"
+                                        CommandArgument='<%# Eval("EnquiryId") %>'
+                                        Enabled='<%# !Convert.ToBoolean(Eval("IsReplay")) %>' />
+
+                                </ItemTemplate>
+                            </asp:TemplateField>
+
                         </Columns>
                     </asp:GridView>
                 </div>

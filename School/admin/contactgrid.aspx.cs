@@ -62,5 +62,24 @@ namespace School.admin
             txtSearchName.Text = "";
             BindStudentGrid();
         }
+
+        protected void gvStudents_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Contact")
+            {
+                int contactId = Convert.ToInt32(e.CommandArgument);
+
+                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
+                {
+                    SqlCommand cmd = new SqlCommand("UPDATE ContactUs SET IsContacted = 1 WHERE ContactId=@ContactId", con);
+                    cmd.Parameters.AddWithValue("@ContactId", contactId);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+
+                BindStudentGrid();
+            }
+        }
     }
 }

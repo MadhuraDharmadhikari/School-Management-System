@@ -41,7 +41,7 @@
     AutoGenerateColumns="False"
     DataKeyNames="StudentID"
     AllowPaging="True"
-    PageSize="10"
+    PageSize="5"
 
     OnPageIndexChanging="gvStudents_PageIndexChanging"
     OnRowEditing="gvStudents_RowEditing"
