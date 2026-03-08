@@ -62,11 +62,7 @@
              <asp:DropDownList ID="ddlclass" runat="server" CssClass="form-control"  Style="margin-top: 10px" ></asp:DropDownList>
       </div>
 
-            <div class="col-md-12">
-         <asp:Label runat="server" Text="Additional Message (optional)*"  Font-Bold="true" Style="margin-top: 10px"/>
-        <asp:TextBox ID="txtMessage" CssClass="form-control card-title" runat="server" TextMode="MultiLine" Rows="1"   style=" margin-top:10px ; margin-bottom:20px" placeholder="Additional Message"/>
-            </div>
-     
+
 
           <div class="col-md-5"> </div>
           <div class="col-md-1">
@@ -88,12 +84,12 @@
                 var sdbt = document.getElementById('<%=this.txtdbt.ClientID%>').value.trim();
                 var Grade = document.getElementById('<%=this.ddlclass.ClientID%>').value.trim();
                 var Gender = document.getElementById('<%=this.ddlGender.ClientID%>').value.trim();
-                var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();
+            
 
                 let mobilecon = /^\d{10}$/;
                 let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                if (parent === "" || email === "" || clas === "" || phone === "" || city === "" || msg === "" || Grade === "" || sname === "" || sdbt === "" || Gender === "") {
+                if (parent === "" || email === "" || clas === "" || phone === "" || city === "" || Grade === "" || sname === "" || sdbt === "" || Gender === "") {
                     swal("Please fill all details to proceed..!", "", "warning");
                     return false;
                 }
@@ -118,7 +114,7 @@
         document.getElementById('<%= txtEmail.ClientID %>').value = "";
         document.getElementById('<%= txtPhone.ClientID %>').value = "";
         document.getElementById('<%= txtcity.ClientID %>').value = "";
-        document.getElementById('<%= txtMessage.ClientID %>').value = "";
+   
         document.getElementById('<%= txtstnm.ClientID %>').value = "";
         document.getElementById('<%= txtdbt.ClientID %>').value = "";
     document.getElementById('<%= ddlclass.ClientID %>').selectedIndex = 0;

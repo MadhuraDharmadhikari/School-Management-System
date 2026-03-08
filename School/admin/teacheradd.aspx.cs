@@ -173,18 +173,15 @@ namespace School.admin
                 cmd.ExecuteNonQuery();
    
             }
-
-            ClearControls();
+ ClearControls();
             GenerateAdmissionNo();
-
-            // Show SweetAlert without page reload
             ScriptManager.RegisterStartupScript(
-        this,
-        GetType(),
-        "success",
-        "swal('Registered Successfully!', '', 'success');",
-        true
-    );
+this,
+GetType(),
+"success",
+"swal('Registered Successfully!', '', 'success');",
+true
+);
             GenerateAdmissionNo();
         }
         private void ClearControls()

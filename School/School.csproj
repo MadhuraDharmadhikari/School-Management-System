@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\adminprof.aspx" />
+    <Content Include="admin\allstugrid.aspx" />
     <Content Include="admin\authetication\changepassword.aspx" />
     <Content Include="admin\authetication\forgetpassword.aspx" />
     <Content Include="admin\authetication\Login.aspx" />
@@ -3618,6 +3619,13 @@
     </Compile>
     <Compile Include="admin\adminprof.aspx.designer.cs">
       <DependentUpon>adminprof.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\allstugrid.aspx.cs">
+      <DependentUpon>allstugrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\allstugrid.aspx.designer.cs">
+      <DependentUpon>allstugrid.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\authetication\changepassword.aspx.cs">
       <DependentUpon>changepassword.aspx</DependentUpon>

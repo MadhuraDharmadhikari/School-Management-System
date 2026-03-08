@@ -86,13 +86,13 @@
                             <!-- Experience -->
                             <div class="col-md-3 mt-3">
                                 <asp:Label ID="LabelT13" runat="server" Text="Experience (Years)" Font-Bold="true"></asp:Label>
-                               <asp:DropDownList ID="ddlexp" runat="server" CssClass="form-control"  Style="margin-top: 10px" AutoPostBack="true"   OnSelectedIndexChanged="Salary_Changed"></asp:DropDownList>
+                               <asp:DropDownList ID="ddlexp" runat="server" CssClass="form-control"  Style="margin-top: 15px" AutoPostBack="true"   OnSelectedIndexChanged="Salary_Changed"></asp:DropDownList>
                             </div>
 
                             <!-- Salary -->
                             <div class="col-md-3 mt-3">
                                 <asp:Label ID="LabelT12" runat="server" Text="Salary" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtSalary" CssClass="form-control" runat="server" Style="margin-top: 10px" placeholder="Salary" ReadOnly="true"  BackColor="#f0f0f0"></asp:TextBox>
+                                <asp:TextBox ID="txtSalary" CssClass="form-control" runat="server" Style="margin-top: 15px" placeholder="Salary" ReadOnly="true"  BackColor="#f0f0f0"></asp:TextBox>
                             </div>
 
 

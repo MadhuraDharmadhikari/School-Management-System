@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Site1.Master" AutoEventWireup="true" CodeBehind="studentgrid.aspx.cs" Inherits="School.admin.studentgrid" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class="content-body">
@@ -32,7 +33,7 @@
             </div>
                <div class="card m-3">
                 <div class="card-body">
-                    <h3 class="card-title mb-4">Registered Students</h3>
+                    <h3 class="card-title mb-4">Confirm Students</h3>
                  <%--   Gridview--%>
                     <div class="table-responsive">
                 <asp:GridView ID="gvStudents" runat="server"
@@ -52,15 +53,14 @@
                         <Columns>
                                    
                             <asp:BoundField DataField="AdmissionNo" HeaderText="Admission No" />
-    
                               <asp:BoundField DataField="StudentName" HeaderText="Student Name" />
                             <asp:BoundField DataField="Class" HeaderText="Class" />
-              
-                           
                             <asp:BoundField DataField="TotalFees" HeaderText="Total Fees" />
                             <asp:BoundField DataField="PaidAmount" HeaderText="Paid Amount" />
                             <asp:BoundField DataField="PendingAmount" HeaderText="Pending Amount" />
                              <asp:BoundField DataField="ParentPhone" HeaderText="Parent Phone" />
+                             <asp:BoundField DataField="AdmissionStatus" HeaderText="Admission Status" />
+
 <%--                            <asp:BoundField DataField="PaymentMode" HeaderText="Payment Mode" />--%>
 
                                    

@@ -131,8 +131,8 @@ namespace School.admin
             using (SqlConnection con = new SqlConnection(
         ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             {
-                SqlCommand cmd = new SqlCommand(@" INSERT INTO Add_Student(AdmissionNo,AdmissionDate, Class, Section, StudentName, DOB, Gender,ParentName, ParentAddress, ParentPhone, ParentEmail,TotalFees, PaidAmount, PendingAmount, PaymentMode)
-                  VALUES(@AdmissionNo,@AdmissionDate, @Class, @Section, @StudentName, @DOB, @Gender, @ParentName, @ParentAddress, @ParentPhone, @ParentEmail, @TotalFees, @PaidAmount, @PendingAmount, @PaymentMode )", con);
+                SqlCommand cmd = new SqlCommand(@" INSERT INTO Add_Student(AdmissionNo,AdmissionDate, Class, Section, StudentName, DOB, Gender,ParentName, ParentAddress, ParentPhone, ParentEmail,TotalFees, PaidAmount, PendingAmount, PaymentMode,AdmissionStatus)
+                  VALUES(@AdmissionNo,@AdmissionDate, @Class, @Section, @StudentName, @DOB, @Gender, @ParentName, @ParentAddress, @ParentPhone, @ParentEmail, @TotalFees, @PaidAmount, @PendingAmount, @PaymentMode,'Confirm' )", con);
                 DateTime dtAdd_Reg = Convert.ToDateTime(txtadddt.Text);
                 DateTime dtBirth_Date = Convert.ToDateTime(txtdbt.Text);
 

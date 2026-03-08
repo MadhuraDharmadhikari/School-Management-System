@@ -122,7 +122,10 @@
                                 <i class="fas fa-user-graduate"></i><span class="nav-text">STUDENTS</span></a>
                                 <ul aria-expanded="false">
                                     <li><a href="studentadd.aspx"><i class="fas fa-user-plus"></i>Add Student</a></li>
-                                    <li><a href="studentgrid.aspx"><i class="fas fa-list"></i>Student List</a></li>
+                                    <li><a href="allstugrid.aspx"><i class="fas fa-list"></i>All Student List</a></li>
+                                   <li><a href="enqurgrid.aspx"><i class="fa fa-comments"></i>Pending List</a></li>
+                                    <li><a href="studentgrid.aspx"><i class="fas fa-list"></i>Confirm List</a></li>
+        
                                 </ul>
                             </li>
 
@@ -141,7 +144,7 @@
                                 <ul aria-expanded="false">
                                     <li><a href="contactgrid.aspx"><i class="fas fa-address-book"></i>Contact Us List</a></li>
                                     <li><a href="fastenquregrid.aspx"><i class="fa fa-bolt"></i>Fast Enquiry List</a></li>
-                                    <li><a href="enqurgrid.aspx"><i class="fa fa-comments"></i>Enquiry List</a></li>
+                   
                                     <li><a href="feedbackgrid.aspx"><i class="fa fa-comment-dots"></i>Feedback List</a></li>
                                 </ul>
                             </li>

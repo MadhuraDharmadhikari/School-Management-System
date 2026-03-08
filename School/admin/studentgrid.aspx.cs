@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -66,7 +67,7 @@ namespace School.admin
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             {
-                string query = "SELECT * FROM Add_Student WHERE 1=1";
+                string query = "SELECT * FROM Add_Student WHERE AdmissionStatus='Confirm'";
                 if (!string.IsNullOrEmpty(nameFilter))
                     query += " AND StudentName LIKE @Name";
                 if (!string.IsNullOrEmpty(classFilter))
@@ -251,14 +252,25 @@ namespace School.admin
             cmd.Parameters.AddWithValue("@StudentID", hfStudentID.Value);
 
             con.Open();
-            cmd.ExecuteNonQuery();
+            int result = cmd.ExecuteNonQuery();
             con.Close();
 
-            BindStudentGrid();
+            if (result > 0)
+            {
+                BindStudentGrid();
 
-            ScriptManager.RegisterStartupScript(this, GetType(),
-                "close", "$('#editModal').modal('hide');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "success",
+                "Swal.fire('Success','Student Updated Successfully','success').then(()=>{$('#editModal').modal('hide');});", true);
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "error",
+                "Swal.fire('Error','Update Failed','error');", true);
+            }
+        
         }
+   
+
 
 
         // Delete

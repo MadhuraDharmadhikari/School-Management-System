@@ -277,18 +277,23 @@ namespace School.admin
             cmd.Parameters.AddWithValue("@Experience", txteper.Text);
             cmd.Parameters.AddWithValue("@Salary", txtSalaryModal.Text);
             cmd.Parameters.AddWithValue("@Phone", txtPhoneModal.Text);
-
+         
             con.Open();
-            cmd.ExecuteNonQuery();
+            int result = cmd.ExecuteNonQuery();
             con.Close();
 
-            BindGrid();
+            if (result > 0)
+            {
+                BindGrid();
 
-            ScriptManager.RegisterStartupScript(this, GetType(), "HideModal", @"
-            var modalEl = document.getElementById('editModal');
-            var modal = bootstrap.Modal.getInstance(modalEl);
-            modal.hide();
-            ", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "success",
+                "Swal.fire('Success','Teacher Updated Successfully','success').then(()=>{$('#editModal').modal('hide');});", true);
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, GetType(), "error",
+                "Swal.fire('Error','Update Failed','error');", true);
+            }
 
 
         }

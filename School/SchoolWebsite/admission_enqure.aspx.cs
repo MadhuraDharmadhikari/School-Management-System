@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -78,18 +79,19 @@ namespace School.SchoolWebsite
 ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             {
                 SqlCommand cmd = new SqlCommand(
-                    "INSERT INTO AdmissionEnquiry (ParentName, EmailAddress, PhoneNumber, Address, Class, AdditionalMessage,DOB,Sname,Sgender) " +
-                    "VALUES (@ParentName, @EmailAddress, @PhoneNumber, @Address, @Class, @AdditionalMessage,@DOB,@Sname,@Sgender)", con);
-
+                    "INSERT INTO Add_Student (ParentName, ParentEmail, ParentPhone, ParentAddress, Class,DOB,StudentName,Gender,AdmissionStatus) " +
+                    "VALUES (@ParentName, @ParentEmail, @ParentPhone, @ParentAddress, @Class,@DOB,@StudentName,@Gender,@AdmissionStatus)", con);
+              
                 cmd.Parameters.AddWithValue("@ParentName", txtParentName.Text.Trim());
-                cmd.Parameters.AddWithValue("@EmailAddress", txtEmail.Text.Trim());
-                cmd.Parameters.AddWithValue("@PhoneNumber", txtPhone.Text.Trim());
-                cmd.Parameters.AddWithValue("@Address", txtcity.Text.Trim());
+                cmd.Parameters.AddWithValue("@ParentEmail", txtEmail.Text.Trim());
+                cmd.Parameters.AddWithValue("@ParentPhone", txtPhone.Text.Trim());
+                cmd.Parameters.AddWithValue("@ParentAddress", txtcity.Text.Trim());
                 cmd.Parameters.AddWithValue("@DOB", txtdbt.Text.Trim());
-                cmd.Parameters.AddWithValue("@Sname", txtcity.Text.Trim());
-                cmd.Parameters.AddWithValue("@Sgender", ddlGender.SelectedItem.Text);
+                cmd.Parameters.AddWithValue("@StudentName", txtstnm.Text.Trim());
+                cmd.Parameters.AddWithValue("@Gender", ddlGender.SelectedItem.Text);
                 cmd.Parameters.AddWithValue("@Class", ddlclass.SelectedItem.Text);
-                cmd.Parameters.AddWithValue("@AdditionalMessage", txtMessage.Text.Trim());
+                cmd.Parameters.AddWithValue("@AdmissionStatus", "Pending");
+
 
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -123,7 +125,7 @@ ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             ddlGender.SelectedIndex = 0;
             txtdbt.Text = "";
             txtstnm.Text = "";
-            txtMessage.Text = "";
+
         }
     }
 }
