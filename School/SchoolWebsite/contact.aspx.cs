@@ -22,7 +22,7 @@ namespace School.SchoolWebsite
                         this,
                         GetType(),
                         "success",
-                        "swal('Registered Successfully!', '', 'success');",
+                        "swal('Submit Successfully!', '', 'success');",
                         true
                     );
 
@@ -68,7 +68,7 @@ ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
         this,
         GetType(),
         "success",
-        "swal('Registered Successfully!', '', 'success');",
+        "swal('Submit Successfully!', '', 'success');",
         true
     );
 

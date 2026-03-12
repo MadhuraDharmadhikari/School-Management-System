@@ -21,7 +21,7 @@ namespace School.SchoolWebsite
                         this,
                         GetType(),
                         "success",
-                        "swal('Registered Successfully!', '', 'success');",
+                        "swal('Submit Successfully!', '', 'success');",
                         true
                     );
 
@@ -67,7 +67,7 @@ namespace School.SchoolWebsite
                 this,
                 GetType(),
                 "success",
-                "swal('Registered Successfully!', '', 'success');",
+                "swal('Submit Successfully!', '', 'success');",
                 true
                 );
         }

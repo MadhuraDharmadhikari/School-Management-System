@@ -23,6 +23,7 @@ namespace School.admin
                 LoadSection();
                 LoadGrid();
                 LoadTeachers();
+                LoadTeachers1();
             }
         }
 
@@ -57,7 +58,21 @@ namespace School.admin
             ddlTeacher.Items.Insert(0, new ListItem("-- Select Teacher --", ""));
         }
 
+        void LoadTeachers1()
+        {
+            SqlDataAdapter da = new SqlDataAdapter(
+                "SELECT TeacherID, TeacherName FROM add_teacher WHERE Status=1", con);
 
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            ddlTeacher1.DataSource = dt;
+            ddlTeacher1.DataTextField = "TeacherName";
+            ddlTeacher1.DataValueField = "TeacherID";
+            ddlTeacher1.DataBind();
+
+            ddlTeacher1.Items.Insert(0, new ListItem("-- Select Teacher --", ""));
+        }
         void LoadSection()
         {
             SqlDataAdapter da = new SqlDataAdapter(
@@ -78,11 +93,12 @@ namespace School.admin
         {
             SqlCommand chk = new SqlCommand(
                 @"SELECT COUNT(*) FROM ClassSectionMaster
-          WHERE ClassID=@ClassID AND SectionID=@SectionID AND AcademicYear=@Year", con);
+          WHERE ClassID=@ClassID AND SectionID=@SectionID AND AcademicYear=@Year AND ClassTeacherID=@ClassTeacherID", con);
 
             chk.Parameters.AddWithValue("@ClassID", ddlClass.SelectedValue);
             chk.Parameters.AddWithValue("@SectionID", ddlSection.SelectedValue);
             chk.Parameters.AddWithValue("@Year", ddlAcademicYear.Text);
+            chk.Parameters.AddWithValue("@ClassTeacherID", ddlTeacher1.Text);
 
             con.Open();
             int exists = (int)chk.ExecuteScalar();
@@ -90,24 +106,38 @@ namespace School.admin
 
             if (exists > 0)
             {
-                // already exists
+                ScriptManager.RegisterStartupScript(this, GetType(), "alert",
+                "Swal.fire('Already Exists','Class Section already added!','warning');", true);
                 return;
             }
 
             SqlCommand cmd = new SqlCommand(
-                @"INSERT INTO ClassSectionMaster (ClassID, SectionID, AcademicYear)
-          VALUES (@ClassID,@SectionID,@Year)", con);
+                @"INSERT INTO ClassSectionMaster (ClassID, SectionID, AcademicYear,ClassTeacherID)
+          VALUES (@ClassID,@SectionID,@Year,@ClassTeacherID)", con);
 
             cmd.Parameters.AddWithValue("@ClassID", ddlClass.SelectedValue);
             cmd.Parameters.AddWithValue("@SectionID", ddlSection.SelectedValue);
             cmd.Parameters.AddWithValue("@Year", ddlAcademicYear.Text);
+            cmd.Parameters.AddWithValue("@ClassTeacherID", ddlTeacher1.Text);
 
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
 
             LoadGrid();
+            ClearFields();
+
+            ScriptManager.RegisterStartupScript(this, GetType(), "alert",
+                "Swal.fire('Success','Class Section Saved Successfully!','success');", true);
         }
+        void ClearFields()
+{
+    ddlClass.SelectedIndex = 0;
+    ddlSection.SelectedIndex = 0;
+    ddlTeacher.SelectedIndex = 0;
+    ddlTeacher1.SelectedIndex = 0;
+    ddlAcademicYear.Text = "";
+}
 
         protected void gvClassSection_RowCommand(object sender, GridViewCommandEventArgs e)
         {
@@ -159,9 +189,9 @@ namespace School.admin
             LoadGrid();
         }
 
-       void LoadGrid(string search = "")
-{
-    SqlCommand cmd = new SqlCommand(@"
+        void LoadGrid(string search = "")
+        {
+            SqlCommand cmd = new SqlCommand(@"
         SELECT cs.ClassSectionID,
                c.ClassName,
                s.SectionName,
@@ -179,15 +209,15 @@ namespace School.admin
              OR cs.AcademicYear LIKE '%' + @search + '%'
           )", con);
 
-    cmd.Parameters.AddWithValue("@search", search);
+            cmd.Parameters.AddWithValue("@search", search);
 
-    SqlDataAdapter da = new SqlDataAdapter(cmd);
-    DataTable dt = new DataTable();
-    da.Fill(dt);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
 
-    gvClassSection.DataSource = dt;
-    gvClassSection.DataBind();
-}
+            gvClassSection.DataSource = dt;
+            gvClassSection.DataBind();
+        }
         protected void btnCloseModal_Click(object sender, EventArgs e)
         {
             ScriptManager.RegisterStartupScript(
@@ -205,4 +235,4 @@ namespace School.admin
             );
         }
     }
-   }
+}

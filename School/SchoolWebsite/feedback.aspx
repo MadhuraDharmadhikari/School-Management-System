@@ -110,7 +110,7 @@
             </div>
         </div>
 
-        <asp:Button ID="btnSubmit" runat="server" Onclientclick="return valid()" Text="Submit Enquiry"  CssClass="btn btn-success" style="font-weight: 500;" OnClick="btnSubmit_Click" />
+        <asp:Button ID="btnSubmit" runat="server" Onclientclick="return valid()" Text="Submit "  CssClass="btn btn-success" style="font-weight: 500;" OnClick="btnSubmit_Click" />
     </div>
     <br />
     <br />

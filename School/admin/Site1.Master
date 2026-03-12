@@ -155,7 +155,7 @@
                                 <ul aria-expanded="false">
                                     <li><a href="A_classes.aspx"><i class="fa fa-users"></i>Classes</a></li>
                                     <li><a href="A_subject.aspx"><i class="fa fa-book-open"></i>Subjects</a></li>
-                                    <li><a href="A_timetable.aspx"><i class="fa fa-calendar-week"></i>Timetable</a></li>
+                                  <%--  <li><a href="A_timetable.aspx"><i class="fa fa-calendar-week"></i>Timetable</a></li>--%>
                                 </ul>
                             </li>
                         </ul>

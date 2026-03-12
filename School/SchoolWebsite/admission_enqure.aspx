@@ -66,7 +66,7 @@
 
           <div class="col-md-5"> </div>
           <div class="col-md-1">
-             <asp:Button ID="btnSubmit" runat="server" Onclientclick="return valid()" Text="Submit Enquiry"     CssClass="btn btn-success" Style="font-weight: 500;margin-top: 20px" OnClick="btnSubmit_Click" />
+             <asp:Button ID="btnSubmit" runat="server" Onclientclick="return valid()" Text="Submit"     CssClass="btn btn-success" Style="font-weight: 500;margin-top: 20px" OnClick="btnSubmit_Click" />
          </div>
              </div>
     </div>

@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/Site1.Master" AutoEventWireup="true" CodeBehind="A_classes.aspx.cs" Inherits="School.admin.A_classes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.0/sweetalert.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-body">
@@ -21,7 +23,12 @@
                             <label>Section</label>
                             <asp:DropDownList ID="ddlSection" runat="server" CssClass="form-control"></asp:DropDownList>
                         </div>
-
+                        <div class="col-md-4 mb-3">
+                            <label>Class Teacher</label>
+                            <asp:DropDownList ID="ddlTeacher1" runat="server"
+                                CssClass="form-control">
+                            </asp:DropDownList>
+                        </div>
                         <div class="col-md-4 mb-3">
                             <label>Academic Year</label>
                             <asp:DropDownList ID="ddlAcademicYear" runat="server" CssClass="form-control">

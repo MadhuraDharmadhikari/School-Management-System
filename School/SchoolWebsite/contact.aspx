@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <asp:Button ID="btnSubmit" runat="server"  Text="Submit Enquiry" CssClass="btn btn-success" OnClientClick="return valid();" OnClick="btnSubmit_Click" />
+        <asp:Button ID="btnSubmit" runat="server"  Text="Submit" CssClass="btn btn-success" OnClientClick="return valid();" OnClick="btnSubmit_Click" />
 
     </div>
                   </div>
