@@ -31,14 +31,14 @@
             <!-- The slideshow -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="image/school.jpg" class="img-fluid" alt="Los " style="width: 100rem; height: 35rem;">
+                    <img src="image/school.jpg" class="img-fluid" alt="Los " style="width: 100%; height: 35rem;">
                     <div class="carousel-caption" style="background: rgba(0,0,0,0.5); text-align: center; border-radius: 10px;">
                         <p style="font-size: 35px">Shaping Futures with Excellence</p>
                         <p>A World-Class Learning Environment</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="image/5.jpg" class="img-fluid" alt="Los Angeles" style="width:100rem; height: 35rem;">
+                    <img src="image/5.jpg" class="img-fluid" alt="Los Angeles" style="width:100%; height: 35rem;">
                     <div class="carousel-caption" style="background: rgba(0,0,0,0.5); text-align: center; border-radius: 10px;">
                         <p style="font-size: 35px">Inspiring Curiosity, Creating Thinkers</p>
                         <p>Learning That Goes Beyond the Classroom</p>
@@ -46,14 +46,14 @@
 
                 </div>
                 <div class="carousel-item">
-                    <img src="image/6.jpg" class="img-fluid" alt="Chicago" style="width:100rem; height: 35rem;">
+                    <img src="image/6.jpg" class="img-fluid" alt="Chicago" style="width:100%; height: 35rem;">
                     <div class="carousel-caption" style="background: rgba(0,0,0,0.5); text-align: center; border-radius: 10px;">
                         <p style="font-size: 35px">Where Little Minds Begin Big Dreams</p>
                         <p>A Joyful Start to Lifelong Learning</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="image/17.jpg" class="img-fluid" alt="New York" style="width:100rem; height: 35rem;">
+                    <img src="image/17.jpg" class="img-fluid" alt="New York" style="width:100%; height: 35rem;">
                     <div class="carousel-caption" style="background: rgba(0,0,0,0.5); text-align: center; border-radius: 10px;">
                         <p style="font-size: 35px">Learning by Doing, Leading by Innovation</p>
                         <p>Preparing Students for Tomorrow’s World</p>
@@ -176,7 +176,7 @@
                    <i class="fas fa-microscope" style="font-size:40px;color:#fd7e14;"></i>
                         <h4><a  href="laboratories.aspx"
                             style="text-decoration: none;  cursor: pointer;">Advanced Laboratories</a></h4>
-                        <p>Fully equipped labs for hands-on practical learning</p>
+                        <p>Fully equipped labs for hands-on practical learning with modern equipment.</p>
                     </div>
                 </div>
 

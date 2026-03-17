@@ -90,11 +90,15 @@
              var city = document.getElementById('<%=this.txtsub.ClientID%>').value.trim();
              var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();
 
-             let mobilecon = /^\d{10}$/;
+             let mobilecon = /^[6-9]\d{9}$/;
              let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
              if (parent === "" || email === "" || phone === "" || city === "" || msg === "") {
                  swal("Please fill all details to proceed..!", "", "warning");
+                 return false;
+             }
+             if (!emailcon.test(email)) {
+                 swal("Please enter a valid Email ID.", "", "warning");
                  return false;
              }
 
@@ -103,10 +107,7 @@
                  return false;
              }
 
-             if (!emailcon.test(email)) {
-                 swal("Please enter a valid Email ID.", "", "warning");
-                 return false;
-             }
+
 
              return true;
          }

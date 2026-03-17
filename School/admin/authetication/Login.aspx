@@ -52,7 +52,7 @@
                                             </div>
                                         </div>
                                         <div class="text-center">
-                                            <asp:Button ID="btnSignIn" runat="server" Text="Login" CssClass="btn btn-primary btn-block" OnClick="btnSignIn_Click" />
+                                            <asp:Button ID="btnSignIn" runat="server" Text="Login" CssClass="btn btn-primary btn-block" OnClick="btnSignIn_Click"  OnClientClick="return validLogin()" />
                                         </div>
                                     </form>
                                  <%--   <div class="new-account mt-3">
@@ -66,6 +66,34 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function validLogin() {
+
+            var email = document.getElementById('<%=txtEmail.ClientID%>').value.trim();
+        var pass = document.getElementById('<%=txtPassword.ClientID%>').value.trim();
+
+            let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let passwordRule = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (email === "" || pass === "") {
+                alert("Please enter Email and Password.");
+                return false;
+            }
+
+            if (!emailcon.test(email)) {
+                alert("Please enter a valid Email ID.");
+                return false;
+            }
+
+            if (pass === "") {
+                alert("Please enter a new password.");
+                return false;
+            }
+
+
+            return true;
+        }
+    </script>
 
     <!--**********************************
         Scripts

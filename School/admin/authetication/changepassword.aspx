@@ -38,6 +38,7 @@
                                         <asp:Button ID="btnSave" runat="server"
                                             Text="Save Password"
                                             CssClass="btn btn-success btn-block"
+                                             OnClientClick="return validPassword()"
                                             OnClick="btnSave_Click" />
                                     </div>
 
@@ -51,6 +52,26 @@
     </div>
 </div>
 
+    <script>
+        function validPassword() {
+
+            var pass = document.getElementById('<%=txtNewPassword.ClientID%>').value.trim();
+
+    let passwordRule = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (pass === "") {
+        alert("Please enter a new password.");
+        return false;
+    }
+
+    if (!passwordRule.test(pass)) {
+        alert("Password must contain:\n• Minimum 8 characters\n• 1 uppercase letter\n• 1 number\n• 1 special character");
+        return false;
+    }
+
+    return true;
+}
+    </script>
 <script src="../vendor/global/global.min.js"></script>
 <script src="../js/quixnav-init.js"></script>
 <script src="../js/custom.min.js"></script>

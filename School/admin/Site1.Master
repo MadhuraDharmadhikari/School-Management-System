@@ -36,7 +36,7 @@
             </div>
             <div id="main-wrapper">
                 <div class="nav-header">
-                    <a href="index.html" class="brand-logo">
+                    <a href="default.aspx" class="brand-logo">
                         <img src="../SchoolWebsite/image/logo.jpg" class="img-fluid" style="height: 5rem; width: 5rem;" alt="">
                         <h2 style="padding-left: 1rem; padding-right: 5rem; font-family: 'Playfair Display', serif; color: #fff; font-weight: 700;">SGIS</h2>
                     </a>

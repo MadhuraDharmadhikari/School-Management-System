@@ -26,33 +26,33 @@
 
              <div class="row">
          <div class="col-md-6">
-            <asp:Label runat="server" Text="Parent Name*"  Font-Bold="true" Style="margin-top: 10px" />
+            <asp:Label runat="server" Text="Parent Name"  Font-Bold="true" Style="margin-top: 10px" />
             <asp:TextBox ID="txtParentName" CssClass="form-control card-title" runat="server"  style=" margin-top:10px"  placeholder="Parent Name"/>
          </div>
              <div class="col-md-6">
 
-      <asp:Label runat="server" Text="Email Address*"  Font-Bold="true" Style="margin-top: 10px" />
+      <asp:Label runat="server" Text="Email Address"  Font-Bold="true" Style="margin-top: 10px" />
      <asp:TextBox ID="txtEmail" CssClass="form-control card-title" runat="server" TextMode="Email"  style=" margin-top:10px; margin-bottom:20px"  placeholder="Email Address"/>
          </div>
 
          <div class="col-md-6">
-     <asp:Label runat="server" Text="Phone Number*"  Font-Bold="true" Style="margin-top: 10px" />
+     <asp:Label runat="server" Text="Phone Number"  Font-Bold="true" Style="margin-top: 10px" />
      <asp:TextBox ID="txtPhone"  CssClass="form-control card-title" runat="server" TextMode="Phone" style=" margin-top:10px; margin-bottom:20px"  placeholder="Phone Number"/>
          </div>
       <div class="col-md-6">
-       <asp:Label ID="Label6" runat="server" Text="Address*" Font-Bold="true" Style="margin-top: 10px"></asp:Label>
+       <asp:Label ID="Label6" runat="server" Text="Address" Font-Bold="true" Style="margin-top: 10px"></asp:Label>
     <asp:TextBox ID="txtcity" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Address"></asp:TextBox>
      </div>
      
 
   
   <div class="col-md-6">
-        <asp:Label ID="Label3" runat="server" Text="Subject*" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
+        <asp:Label ID="Label3" runat="server" Text="Subject" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
           <asp:TextBox ID="ddlclas" CssClass="form-control card-title" runat="server" Text="" Style="margin-top: 10px" placeholder="Address"></asp:TextBox>
    </div>
 
          <div class="col-md-6">
-      <asp:Label runat="server" Text="Additional Message (optional)*"  Font-Bold="true" Style="margin-top: 10px"/>
+      <asp:Label runat="server" Text="Additional Message (optional)"  Font-Bold="true" Style="margin-top: 10px"/>
      <asp:TextBox ID="txtMessage" CssClass="form-control card-title" runat="server" TextMode="MultiLine" Rows="1"   style=" margin-top:10px ; margin-bottom:20px" placeholder="Additional Message"/>
          </div>
   
@@ -67,45 +67,45 @@
  <br />
 
      <script>
-
          function valid() {
-             var parent = document.getElementById('<%=this.txtParentName.ClientID %>').value.trim();
-             var email = document.getElementById('<%=this.txtEmail.ClientID%>').value.trim();
-             var phone = document.getElementById('<%=this.txtPhone.ClientID%>').value.trim();
-             var city = document.getElementById('<%=this.txtcity.ClientID%>').value.trim();
-             var Grade = document.getElementById('<%=this.ddlclas.ClientID%>').value.trim();
-             var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();
 
-             let mobilecon = /^\d{10}$/;
-             let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+             var parent = document.getElementById('<%=txtParentName.ClientID%>').value.trim();
+    var email = document.getElementById('<%=txtEmail.ClientID%>').value.trim();
+    var phone = document.getElementById('<%=txtPhone.ClientID%>').value.trim();
+    var city = document.getElementById('<%=txtcity.ClientID%>').value.trim();
+    var subject = document.getElementById('<%=ddlclas.ClientID%>').value.trim();
+    var msg = document.getElementById('<%=txtMessage.ClientID%>').value.trim();
 
-             if (parent === "" || email === "" || clas === "" || phone === "" || city === "" || msg === "" || Grade === "") {
-                 swal("Please fill all details to proceed..!", "", "warning");
-                 return false;
-             }
+    let mobilecon = /^[6-9]\d{9}$/;
+    let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-             if (!mobilecon.test(phone)) {
-                 swal("Please enter a valid 10-digit contact number.", "", "warning");
-                 return false;
-             }
+    if (parent === "" || email === "" || phone === "" || city === "" || subject === "") {
+        swal("Please fill all required details to proceed..!", "", "warning");
+        return false;
+    }
 
-             if (!emailcon.test(email)) {
-                 swal("Please enter a valid Email ID.", "", "warning");
-                 return false;
-             }
+    if (!emailcon.test(email)) {
+        swal("Please enter a valid Email ID.", "", "warning");
+        return false;
+    }
 
-             return true;
-         }
+    if (!mobilecon.test(phone)) {
+        swal("Please enter a valid 10-digit mobile number.", "", "warning");
+        return false;
+    }
+
+    return true;
+}
      </script>
  <script type="text/javascript">
      function clearForm() {
 <%--     document.getElementById('<%= txtaddno.ClientID %>').value = "";--%>
-         document.getElementById('<%= txtParentName.ClientID %>').value = "";
-         document.getElementById('<%= txtEmail.ClientID %>').value = "";
-         document.getElementById('<%= txtPhone.ClientID %>').value = "";
-         document.getElementById('<%= txtcity.ClientID %>').value = "";
-         document.getElementById('<%= txtMessage.ClientID %>').value = "";
-         document.getElementById('<%= ddlclas.ClientID %>').selectedIndex = 0;
+         document.getElementById('<%=txtParentName.ClientID %>').value = "";
+         document.getElementById('<%=txtEmail.ClientID %>').value = "";
+         document.getElementById('<%=txtPhone.ClientID %>').value = "";
+         document.getElementById('<%=txtcity.ClientID %>').value = "";
+         document.getElementById('<%=txtMessage.ClientID %>').value = "";
+         document.getElementById('<%=ddlclas.ClientID %>').selectedIndex = 0;
      }
  </script>
     </asp:Content>

@@ -125,11 +125,16 @@
                 var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();
                 var feedback = document.getElementById('<%=this.ddlFeedbackType.ClientID%>').value.trim();
 
-                let mobilecon = /^\d{10}$/;
+                let mobilecon = /^[6-9]\d{9}$/;
                 let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
                 if (feedback === "" || city === "" || parent === "" || contact === "" || email === "" || msg === "") {
                     swal("Please fill all details to proceed..!", "", "warning");
+                    return false;
+                }
+
+                if (!emailcon.test(email)) {
+                    swal("Please enter a valid Email ID.", "", "warning");
                     return false;
                 }
 
@@ -138,10 +143,7 @@
                     return false;
                 }
 
-                if (!emailcon.test(email)) {
-                    swal("Please enter a valid Email ID.", "", "warning");
-                    return false;
-                }
+
                 var rating = document.getElementById('<%= hfRating.ClientID %>').value;
 
                 if (rating === "") {

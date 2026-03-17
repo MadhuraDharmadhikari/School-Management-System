@@ -35,11 +35,12 @@ namespace School.admin.authetication
             }
             else
             {
-                ClientScript.RegisterStartupScript(
-                    this.GetType(),
-                    "alert",
-                    "alert('Email not found');",
-                    true);
+                ScriptManager.RegisterStartupScript(
+      this,
+      GetType(),
+      "error",
+      "swal('Email not found!', 'Please enter a registered email.', 'error');",
+      true);
             }
         }
         }
