@@ -52,25 +52,25 @@
                   <div class="row">
                   
             <div class="col-md-6">
-               <asp:Label runat="server" Text="Full Name*" style="font-weight: 500;" Font-Bold="true" />
+               <asp:Label runat="server" Text="Full Name" style="font-weight: 500;" Font-Bold="true" />
                <asp:TextBox ID="txtParentName"  CssClass="form-control card-title" runat="server" style=" margin-top:10px"  placeholder="Full Name"/>
             </div>
                 <div class="col-md-6">
 
-         <asp:Label runat="server" Text="Email Address*" style="font-weight: 500;" Font-Bold="true" />
+         <asp:Label runat="server" Text="Email Address" style="font-weight: 500;" Font-Bold="true" />
         <asp:TextBox ID="txtEmail" runat="server"  CssClass="form-control card-title" TextMode="Email" style=" margin-top:10px; margin-bottom:20px"  placeholder="Email Address"/>
             </div>
 
             <div class="col-md-6">
-        <asp:Label runat="server" Text="Phone Number*" style="font-weight: 500;" Font-Bold="true" />
+        <asp:Label runat="server" Text="Phone Number" style="font-weight: 500;" Font-Bold="true" />
         <asp:TextBox ID="txtPhone" runat="server"  CssClass="form-control card-title" TextMode="Phone" style=" margin-top:10px; margin-bottom:20px"  placeholder="Phone Number"/>
             </div>
          <div class="col-md-6">
-         <asp:Label runat="server" Text="Subject*" style="font-weight: 500;" Font-Bold="true" />
+         <asp:Label runat="server" Text="Subject" style="font-weight: 500;" Font-Bold="true" />
         <asp:TextBox ID="txtsub" runat="server"  CssClass="form-control card-title"  style=" margin-top:10px ; margin-bottom:20px"  placeholder="Subject"/>
             </div>
             <div class="col-md-12">
-         <asp:Label runat="server" Text="Additional Message (optional)*" style="font-weight: 500;"  Font-Bold="true" />
+         <asp:Label runat="server" Text="Additional Message (optional)" style="font-weight: 500;"  Font-Bold="true" />
         <asp:TextBox ID="txtMessage" runat="server"  CssClass="form-control card-title" TextMode="MultiLine" Rows="4"   style=" margin-top:10px ; margin-bottom:20px" placeholder="Additional Message"/>
             </div>
         </div>
@@ -88,12 +88,12 @@
              var email = document.getElementById('<%=this.txtEmail.ClientID%>').value.trim();
              var phone = document.getElementById('<%=this.txtPhone.ClientID%>').value.trim();
              var city = document.getElementById('<%=this.txtsub.ClientID%>').value.trim();
-             var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();
+          <%--   var msg = document.getElementById('<%=this.txtMessage.ClientID%>').value.trim();--%>
 
              let mobilecon = /^[6-9]\d{9}$/;
              let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-             if (parent === "" || email === "" || phone === "" || city === "" || msg === "") {
+             if (parent === "" || email === "" || phone === "" || city === "" ) {
                  swal("Please fill all details to proceed..!", "", "warning");
                  return false;
              }

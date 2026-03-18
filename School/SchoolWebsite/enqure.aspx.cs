@@ -45,8 +45,8 @@ namespace School.SchoolWebsite
 ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             {
                 SqlCommand cmd = new SqlCommand(
-                    "INSERT INTO fastAdmissionEnquiry (ParentName, EmailAddress, PhoneNumber, Address, Class, AdditionalMessage) " +
-                    "VALUES (@ParentName, @EmailAddress, @PhoneNumber, @Address, @Class, @AdditionalMessage)", con);
+                    "INSERT INTO fastAdmissionEnquiry (ParentName, EmailAddress, PhoneNumber, Address, Class, AdditionalMessage,CreatedDate) " +
+                    "VALUES (@ParentName, @EmailAddress, @PhoneNumber, @Address, @Class, @AdditionalMessage, GETDATE())", con);
 
                 cmd.Parameters.AddWithValue("@ParentName", txtParentName.Text.Trim());
                 cmd.Parameters.AddWithValue("@EmailAddress", txtEmail.Text.Trim());

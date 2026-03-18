@@ -58,7 +58,7 @@
   </div>
   
      <div class="col-md-6">
-           <asp:Label ID="Label3" runat="server" Text="Class*" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
+           <asp:Label ID="Label3" runat="server" Text="Class" Font-Bold="true" Style="margin-top: 10px"> </asp:Label>
              <asp:DropDownList ID="ddlclass" runat="server" CssClass="form-control"  Style="margin-top: 10px" ></asp:DropDownList>
       </div>
 

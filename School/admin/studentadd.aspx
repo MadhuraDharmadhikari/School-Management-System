@@ -123,7 +123,8 @@
                 var paidfees = document.getElementById('<%=this.txtpaidfee.ClientID%>').value.trim();
                 var paymanetmode = document.getElementById('<%=this.ddlPaymentMode.ClientID%>').value.trim();
 
-                let mobilecon = /^\d{10}$/;
+
+                let mobilecon = /^[6-9]\d{9}$/;
                 let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
                 if ( adddt === "" || clas === "" || section === "" || stnm === "" || stdt === "" || stgen === "" || prnm === "" || pradd === "" || prphn === "" || prem === "" || paidfees === "" || paymanetmode === "") {

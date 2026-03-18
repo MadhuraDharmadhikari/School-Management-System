@@ -48,26 +48,26 @@
 
         <div class="row">
             <div class="col-md-6">
-               <asp:Label runat="server" Text="Full Name*" style="font-weight: 500;" />
+               <asp:Label runat="server" Text="Full Name" style="font-weight: 500;" />
                <asp:TextBox ID="txtParentName" runat="server" Width="100%" style=" margin-top:10px"  placeholder="Parent Name"/>
             </div>
                 <div class="col-md-6">
 
-         <asp:Label runat="server" Text="Email Address*" style="font-weight: 500;" />
+         <asp:Label runat="server" Text="Email Address" style="font-weight: 500;" />
         <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" Width="100%" style=" margin-top:10px; margin-bottom:20px"  placeholder="Email Address"/>
             </div>
 
             <div class="col-md-6">
-        <asp:Label runat="server" Text="Phone Number*" style="font-weight: 500;" />
+        <asp:Label runat="server" Text="Phone Number" style="font-weight: 500;" />
         <asp:TextBox ID="txtPhone" runat="server" TextMode="Phone" Width="100%" style=" margin-top:10px; margin-bottom:20px"  placeholder="Phone Number"/>
             </div>
          <div class="col-md-6">
-         <asp:Label runat="server" Text="City*" style="font-weight: 500;" />
+         <asp:Label runat="server" Text="City" style="font-weight: 500;" />
         <asp:TextBox ID="txtcity" runat="server"  Width="100%" style=" margin-top:10px;margin-bottom:20px ; margin-bottom:20px"  placeholder="City"/>
             </div>
 
        <div class="col-md-6">
-    <asp:Label runat="server" Text="Select Feedback Type*" style="font-weight: 500;" />
+    <asp:Label runat="server" Text="Select Feedback Type" style="font-weight: 500;" />
   <asp:DropDownList ID="ddlFeedbackType" runat="server"
     CssClass="form-control"
     style="margin-top:10px; margin-bottom:20px;">
@@ -82,7 +82,7 @@
 </asp:DropDownList>
         </div>
      <div class="col-md-6">
-          <asp:Label runat="server" Text="Rate Us*" style="font-weight: 500;margin-top:50px;" />
+          <asp:Label runat="server" Text="Rate Us" style="font-weight: 500;margin-top:50px;" />
 <div class="rating">
     <input type="radio" name="rating" id="star5" value="5" onclick="setRating(5)">
     <label for="star5">★</label>
@@ -105,7 +105,7 @@
         </div>
 
             <div class="col-md-12">
-         <asp:Label runat="server" Text="Write your feedback...*" style="font-weight: 500;" />
+         <asp:Label runat="server" Text="Write your feedback..." style="font-weight: 500;" />
         <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" Rows="4" Width="100%"  style=" margin-top:10px ; margin-bottom:20px" placeholder="Write your feedback..."/>
             </div>
         </div>

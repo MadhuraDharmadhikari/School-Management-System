@@ -64,13 +64,13 @@ ConfigurationManager.ConnectionStrings["SchoolDB"].ConnectionString))
             // Redirect (VERY IMPORTANT)
             Response.Redirect("contact.aspx");
             // Show SweetAlert without page reload
-            ScriptManager.RegisterStartupScript(
-        this,
-        GetType(),
-        "success",
-        "swal('Submit Successfully!', '', 'success');",
-        true
-    );
+    //        ScriptManager.RegisterStartupScript(
+    //    this,
+    //    GetType(),
+    //    "success",
+    //    "swal('Submit Successfully!', '', 'success');",
+    //    true
+    //);
 
         }
         private void ClearControls()

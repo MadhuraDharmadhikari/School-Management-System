@@ -68,7 +68,7 @@
                             <!-- Email -->
                             <div class="col-md-3 mt-3">
                                 <asp:Label ID="LabelT10" runat="server" Text="Email Address" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" Style="margin-top: 10px" placeholder="Email Address"></asp:TextBox>
+                                <asp:TextBox ID="txtEmail" CssClass="form-control" runat="server" Style="margin-top: 10px" placeholder="Email Address" TextMode="Email"></asp:TextBox>
                             </div>
 
                                                  <!-- Department -->
@@ -127,21 +127,23 @@
             var teexp = document.getElementById('<%=this.ddlexp.ClientID%>').value.trim();
             var tesalary = document.getElementById('<%=this.txtSalary.ClientID%>').value.trim();
 
-            let mobilecon = /^\d{10}$/;
-            let emailcon = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            let mobilecon = /^[6-9]\d{9}$/;
+            let emailcon = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 
             if (teachid === "" || tejdt === "" || tedeprt === "" || tedesig === "" || teanm === "" || tebdt === "" || tegender === "" || teadd === "" || tephone === "" || teaem === "" || tequli === "" || teexp === "" || tesalary === "") {
                 swal("Please fill all details to proceed..!", "", "warning");
                 return false;
             }
 
-            if (!mobilecon.test(tephone)) {
-                swal("Please enter a valid 10-digit contact number.", "", "warning");
+            if (!emailcon.test(teaem)) {
+                swal("Please enter a valid Email ID.", "", "warning");
                 return false;
             }
 
-            if (!emailcon.test(teaem)) {
-                swal("Please enter a valid Email ID.", "", "warning");
+            if (!mobilecon.test(tephone)) {
+                swal("Please enter a valid 10-digit contact number.", "", "warning");
                 return false;
             }
 
